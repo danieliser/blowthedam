@@ -133,7 +133,7 @@ export default function SourcesPage() {
                     Research on Florida springs accessibility and "thermal network" for manatees.
                   </p>
                   <a
-                    href="https://www.mmc.gov/wp-content/uploads/taylor.pdf"
+                    href="https://www.mmc.gov/wp-content/uploads/taylorFLspringsreport.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -328,7 +328,7 @@ export default function SourcesPage() {
                     Information on flooding impacts, river miles, and Cross Florida Barge Canal legacy.
                   </p>
                   <a
-                    href="https://defenders.org/newsroom/great-florida-riverway-would-help-endangered-species-and-boost-economy"
+                    href="https://defenders.org/newsroom/ocklawaha-river-named-among-americas-most-endangered-rivers-of-2020"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
