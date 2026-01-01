@@ -29,18 +29,21 @@ export default function TakeActionPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-secondary py-16 text-secondary-foreground sm:py-24">
+      <section className="relative overflow-hidden bg-secondary py-24 text-secondary-foreground sm:py-32">
         <div className="absolute inset-0 z-0">
           <img
-            src="/pristine-florida-spring-with-lush-vegetation.jpg"
-            alt="Pristine Florida spring"
-            className="h-full w-full object-cover opacity-20"
+            src="/rodman-dam-explosion.jpg"
+            alt="Rodman Dam removal visualization"
+            className="h-full w-full object-cover opacity-30"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-secondary" />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl">Take Action Today</h1>
-            <p className="mt-6 text-pretty text-lg leading-relaxed">
+            <h1 className="text-balance text-4xl font-bold tracking-tight drop-shadow-lg sm:text-5xl">
+              Take Action Today
+            </h1>
+            <p className="mt-6 text-pretty text-lg leading-relaxed drop-shadow-md">
               Your voice matters. Join thousands of Floridians calling for the restoration of the Ocklawaha River and
               removal of Rodman Dam.
             </p>

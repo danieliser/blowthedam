@@ -139,6 +139,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Blow the Dam Section */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-2xl bg-card shadow-2xl">
+            <div className="relative aspect-[16/9] sm:aspect-[21/9]">
+              <img
+                src="/rodman-dam-explosion.jpg"
+                alt="Rodman Dam Explosion - Opening the gateways to Silver Springs & the St. Johns"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-12">
+                <div className="text-center">
+                  <h2 className="text-balance text-3xl font-bold text-white drop-shadow-lg sm:text-4xl lg:text-5xl">
+                    It's Time to Blow the Dam
+                  </h2>
+                  <p className="mt-4 text-pretty text-lg text-white/95 drop-shadow-md sm:text-xl lg:text-2xl">
+                    Opening the gateways to Silver Springs & the St. Johns River
+                  </p>
+                  <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                    <Button size="lg" variant="secondary" asChild>
+                      <Link href="/take-action">
+                        Join the Movement
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button
+                      size="lg"
+                      className="border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+                      asChild
+                    >
+                      <Link href="/manatees">Learn Why</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <section className="bg-secondary py-16 text-secondary-foreground sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
