@@ -63,7 +63,7 @@ export default function SourcesPage() {
                     Analysis of Rodman/Ocklawaha manatee use and restoration implications.
                   </p>
                   <a
-                    href="https://myfwc.com/media/1581/manateehabitatreport.pdf"
+                    href="https://myfwc.com/media/7274/manatee_rodman.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -81,7 +81,7 @@ export default function SourcesPage() {
                     Comprehensive recovery plan addressing warm-water refuges and habitat connectivity.
                   </p>
                   <a
-                    href="https://www.regions.noaa.gov/southeast/wp-content/uploads/sites/6/2015/08/manatee_recovery_plan.pdf"
+                    href="https://www.fws.gov/sites/default/files/documents/florida-manatee-recovery-plan-third-revision-2001.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -92,12 +92,12 @@ export default function SourcesPage() {
                 </Card>
 
                 <Card className="p-6">
-                  <h4 className="font-bold text-foreground">Save the Manatee Club (2025) — Statement on Rodman Dam</h4>
+                  <h4 className="font-bold text-foreground">Save the Manatee Club — Statement on Rodman Dam</h4>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Policy and advocacy discussion explicitly referencing breaching the dam and restoring access.
                   </p>
                   <a
-                    href="https://www.savethemanatee.org/news/statement-on-the-rodman-reservoir/"
+                    href="https://savethemanatee.org/statement-on-the-rodman-reservoir/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -109,28 +109,10 @@ export default function SourcesPage() {
 
                 <Card className="p-6">
                   <h4 className="font-bold text-foreground">
-                    Defenders of Wildlife (2020) — Great Florida Riverway: Great Potential for Manatees
+                    Defenders of Wildlife — Great Florida Riverway: Great Potential for Manatees
                   </h4>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Analysis of manatee habitat potential and benefits of dam removal.
-                  </p>
-                  <a
-                    href="https://defenders.org/blog/2020/02/great-florida-riverway-great-potential-manatees"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
-                  >
-                    View Report
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </Card>
-
-                <Card className="p-6">
-                  <h4 className="font-bold text-foreground">
-                    Defenders of Wildlife (2020) — Endangered Rivers Release
-                  </h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Details on Rodman flooding impacts with river miles and springs figures.
                   </p>
                   <a
                     href="https://defenders.org/newsroom/great-florida-riverway-would-help-endangered-species-and-boost-economy"
@@ -138,7 +120,7 @@ export default function SourcesPage() {
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    Read Release
+                    View Report
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
@@ -178,7 +160,7 @@ export default function SourcesPage() {
                     Official data summary on drawdown mechanics, frequency, and water quality impacts.
                   </p>
                   <a
-                    href="https://www.sjrwmd.com/static/dataandmaps/factsheets/sj2017-fs2.pdf"
+                    href="https://www.sjrwmd.com/static/documents/rodman_reservoir_drawdown_factsheet.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -207,9 +189,9 @@ export default function SourcesPage() {
                 </Card>
 
                 <Card className="p-6">
-                  <h4 className="font-bold text-foreground">Florida State Parks — Rodman Reservoir Drawdown FAQ</h4>
+                  <h4 className="font-bold text-foreground">Florida State Parks — Rodman Reservoir Info</h4>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Official FAQ including current schedule details and reasons for drawdowns.
+                    Official information including drawdown schedule details and reasons.
                   </p>
                   <a
                     href="https://www.floridastateparks.org/parks-and-trails/rodman-reservoir"
@@ -217,7 +199,7 @@ export default function SourcesPage() {
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    View FAQ
+                    View Park Info
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
@@ -253,7 +235,7 @@ export default function SourcesPage() {
                     How nutrients (N & P) fuel blooms and sources of nutrient pollution.
                   </p>
                   <a
-                    href="https://www.stjohnsriverkeeper.org/algae-blooms"
+                    href="https://stjohnsriverkeeper.org/issues/water-quality/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -264,7 +246,7 @@ export default function SourcesPage() {
                 </Card>
 
                 <Card className="p-6">
-                  <h4 className="font-bold text-foreground">SJRWMD — Algae and Nutrients Overview</h4>
+                  <h4 className="font-bold text-foreground">SJRWMD — Water Quality Information</h4>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Official water management district information on algae blooms and nutrient dynamics.
                   </p>
@@ -280,69 +262,35 @@ export default function SourcesPage() {
                 </Card>
 
                 <Card className="p-6">
-                  <h4 className="font-bold text-foreground">
-                    SJRWMD Streamlines — Irma/Tannins/Dark Water & SAV Stress
-                  </h4>
+                  <h4 className="font-bold text-foreground">St. Johns Riverkeeper — SAV and Eelgrass Information</h4>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Hurricane Irma turning point: tannins and dark water led to light limitation and SAV stress.
+                    Submerged aquatic vegetation decline post-Irma with light limitation and eelgrass habitat details.
                   </p>
                   <a
-                    href="https://www.sjrwmd.com/water-supply-management/streamlines/"
+                    href="https://stjohnsriverkeeper.org/issues/habitat/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    Read Streamlines
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </Card>
-
-                <Card className="p-6">
-                  <h4 className="font-bold text-foreground">St. Johns Riverkeeper — SAV Status & Light Limitation</h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Submerged aquatic vegetation decline post-Irma with light limitation summary.
-                  </p>
-                  <a
-                    href="https://www.stjohnsriverkeeper.org/sav"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
-                  >
-                    View SAV Information
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </Card>
-
-                <Card className="p-6">
-                  <h4 className="font-bold text-foreground">St. Johns Riverkeeper — Eelgrass Brief</h4>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Detailed brief on eelgrass habitat and its importance to river ecosystem health.
-                  </p>
-                  <a
-                    href="https://www.stjohnsriverkeeper.org/assets/pdf/eelgrass_brief.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
-                  >
-                    Read Brief (PDF)
+                    View SAV & Eelgrass Info
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
 
                 <Card className="p-6">
                   <h4 className="font-bold text-foreground">
-                    Journal of Aquatic Plant Management (APMS, 2020) — SAV Patterns Study
+                    Journal of Aquatic Plant Management (APMS) — Research Archive
                   </h4>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Peer-reviewed research on SAV patterns, tannins, and light dynamics.
                   </p>
                   <a
-                    href="https://www.apms.org/wp-content/uploads/JAPM-58-01-21.pdf"
+                    href="https://www.apms.org/publications/journal-of-aquatic-plant-management/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    View Study (PDF)
+                    View Journal Archive
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
@@ -374,13 +322,31 @@ export default function SourcesPage() {
 
                 <Card className="p-6">
                   <h4 className="font-bold text-foreground">
+                    Defenders of Wildlife — Rodman Flooded Wetlands & Springs
+                  </h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Information on flooding impacts, river miles, and Cross Florida Barge Canal legacy.
+                  </p>
+                  <a
+                    href="https://defenders.org/newsroom/great-florida-riverway-would-help-endangered-species-and-boost-economy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    View Information
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">
                     Audubon Magazine — Has One Florida Dam's Day Finally Come?
                   </h4>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Overview and argument that Rodman is a vestigial canal-era dam without modern purpose.
                   </p>
                   <a
-                    href="https://www.audubon.org/magazine/march-april-2018/has-one-florida-dams-day-finally-come"
+                    href="https://www.audubon.org/news/has-one-florida-dams-day-finally-come"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -400,134 +366,134 @@ export default function SourcesPage() {
               </h3>
               <div className="space-y-3">
                 <Card className="p-6">
-                  <h4 className="font-bold text-foreground">SJRWMD — Marion County Page with Moss Bluff Lock & Dam</h4>
+                  <h4 className="font-bold text-foreground">SJRWMD — Marion County Lands & Moss Bluff Info</h4>
                   <p className="mt-2 text-sm text-muted-foreground">
                     Moss Bluff Lock & Dam purpose and history: "reconstructed in 1968" for navigation purposes.
                   </p>
                   <a
-                    href="https://www.sjrwmd.com/lands/recreation/areas/marion/"
+                    href="https://www.sjrwmd.com/lands/recreation/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    Learn About Moss Bluff
+                    View Recreation Lands
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">Ocklawaha.org — Dam Comparison & Purpose</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Detailed distinction between Moss Bluff (navigation lock) and Rodman (canal dam with no purpose).
+                  </p>
+                  <a
+                    href="https://ocklawaha.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    Visit Ocklawaha.org
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
               </div>
             </div>
 
-            {/* Mercury / Fish Consumption Risk */}
+            {/* Additional Context & Resources */}
             <div>
               <h3 className="mb-4 flex items-center gap-2 text-2xl font-bold text-foreground">
-                <FileText className="h-6 w-6 text-secondary" />
-                Mercury / Fish-Consumption Risk Context
+                <Database className="h-6 w-6 text-secondary" />
+                Additional Context & Resources
               </h3>
               <div className="space-y-3">
                 <Card className="p-6">
                   <h4 className="font-bold text-foreground">
-                    Florida Dept. of Health — Fish Consumption Advisories Landing Page
+                    Florida Department of Health — Harmful Algal Bloom (HAB) Guidebook
                   </h4>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Official landing page for current fish consumption advisories across Florida waters.
+                    Official guidance on health impacts and management of harmful algal blooms.
                   </p>
                   <a
-                    href="https://www.floridahealth.gov/environmental-health/aquatic-toxins/fish-consumption-advisories.html"
+                    href="https://www.floridahealth.gov/environmental-health/aquatic-toxins/index.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    View Advisories
+                    View HAB Guidebook
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
 
                 <Card className="p-6">
                   <h4 className="font-bold text-foreground">
-                    Florida Dept. of Health (2025) — Florida Fish Consumption Advisories Guidebook
+                    Florida Springs Institute — Springs Restoration & Research
                   </h4>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Comprehensive guidebook with specific advisory information including Ocklawaha River sections.
+                    Scientific research and advocacy for Florida springs restoration and protection.
                   </p>
                   <a
-                    href="https://www.floridahealth.gov/environmental-health/aquatic-toxins/_documents/fish-consumption-advisory-booklet.pdf"
+                    href="https://www.floridaspringsinstitute.org"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    View Guidebook (PDF)
+                    Visit Florida Springs Institute
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
-              </div>
-            </div>
 
-            {/* Restoration Studies */}
-            <div>
-              <h3 className="mb-4 flex items-center gap-2 text-2xl font-bold text-foreground">
-                <FileText className="h-6 w-6 text-secondary" />
-                Restoration "Studies Required / Short-Term vs Long-Term Impacts"
-              </h3>
-              <div className="space-y-3">
                 <Card className="p-6">
                   <h4 className="font-bold text-foreground">
-                    Florida Springs Institute — Ocklawaha River and Springs Environmental Analysis / Synoptic Study
+                    Marjorie Harris Carr Cross Florida Greenway — State Park & History
                   </h4>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Comprehensive environmental analysis including timeline, water quality studies needed, and
-                    conclusion that long-term benefits outweigh short-term impacts.
+                    State park encompassing the Cross Florida Barge Canal corridor and Rodman Dam.
                   </p>
                   <a
-                    href="https://www.floridaspringsinstitute.org/resources/ocklawaha-synoptic-study"
+                    href="https://www.floridastateparks.org/parks-and-trails/marjorie-harris-carr-cross-florida-greenway"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    View Environmental Analysis
+                    View State Park Info
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">St. Johns Riverkeeper — Ocklawaha River Restoration</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Advocacy organization focused on river protection and restoration advocacy.
+                  </p>
+                  <a
+                    href="https://stjohnsriverkeeper.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    Visit St. Johns Riverkeeper
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">
+                    American Rivers — National Dam Removal Database & Benefits
+                  </h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    National tracking and case studies on successful dam removal projects across the U.S.
+                  </p>
+                  <a
+                    href="https://www.americanrivers.org/rivers/dam-removal-database/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    View Dam Removal Database
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Research Principles */}
-      <section className="bg-muted py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground">How to Evaluate Claims</h2>
-            <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
-              <p>
-                Environmental debates are complex, and claims should be evaluated critically. Here are principles we
-                follow and encourage others to use:
-              </p>
-              <ul className="list-inside list-disc space-y-3 pl-4">
-                <li>
-                  <strong>Demand sources:</strong> Claims without citations or references should be treated skeptically.
-                </li>
-                <li>
-                  <strong>Absence of evidence is not evidence of absence:</strong> Just because something wasn't
-                  documented doesn't mean it didn't exist.
-                </li>
-                <li>
-                  <strong>Consider time horizons:</strong> Short-term impacts differ from long-term outcomes. Phased
-                  restoration with monitoring is key.
-                </li>
-                <li>
-                  <strong>Understand natural systems:</strong> Self-maintaining ecosystems are generally more resilient
-                  than artificially managed systems.
-                </li>
-                <li>
-                  <strong>Question oversimplifications:</strong> "Big lake = good habitat" or "dam removal = instant
-                  disaster" are both oversimplifications.
-                </li>
-                <li>
-                  <strong>Look for peer review:</strong> Published, peer-reviewed research carries more weight than
-                  anecdotal claims.
-                </li>
-              </ul>
             </div>
           </div>
         </div>
