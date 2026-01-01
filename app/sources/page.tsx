@@ -346,6 +346,24 @@ export default function SourcesPage() {
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">
+                    Florida Department of Health — Fish Consumption Advisories
+                  </h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Current fish and seafood consumption advisories for Florida waters, including safety guidelines.
+                  </p>
+                  <a
+                    href="https://www.floridahealth.gov/programs-and-services/prevention/healthy-weight/nutrition/seafood-consumption/_documents/Florida-Fish-Consumption-Recommendations-Guidebook.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    View Fish Advisories
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
               </div>
             </div>
 
@@ -423,12 +441,12 @@ export default function SourcesPage() {
                     Moss Bluff Lock & Dam purpose and history: "reconstructed in 1968" for navigation purposes.
                   </p>
                   <a
-                    href="https://www.sjrwmd.com/lands/recreation/"
+                    href="https://www.sjrwmd.com/district-counties/marion-county/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
-                    View Recreation Lands
+                    View Marion County Info
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
