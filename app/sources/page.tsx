@@ -364,6 +364,25 @@ export default function SourcesPage() {
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">
+                    Florida Springs Institute — Ocklawaha River and Springs Environmental Analysis / Synoptic Study
+                  </h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Comprehensive synoptic study analyzing the Ocklawaha River and springs system environmental
+                    conditions.
+                  </p>
+                  <a
+                    href="https://floridaspringsinstitute.org/wp-content/uploads/2020/06/Ocklawaha-Synoptic-Study_final-002.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    Read Synoptic Study (PDF)
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
               </div>
             </div>
 
