@@ -160,7 +160,7 @@ export default function SourcesPage() {
                     Official data summary on drawdown mechanics, frequency, and water quality impacts.
                   </p>
                   <a
-                    href="https://www.sjrwmd.com/static/documents/rodman_reservoir_drawdown_factsheet.pdf"
+                    href="https://aws.sjrwmd.com/SJRWMD/publications/SJ2017-FS2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -178,7 +178,7 @@ export default function SourcesPage() {
                     Educational overview of drawdown frequency, duration, and mechanics.
                   </p>
                   <a
-                    href="https://blogs.ifas.ufl.edu/news/2015/09/01/whats-happening-around-florida-rodman-reservoir-drawdown/"
+                    href="https://blogs.ifas.ufl.edu/caip/2021/08/16/drawdowns-a-brief-look-at-rodman-reservoir/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -210,12 +210,28 @@ export default function SourcesPage() {
                     Notes on drawdown timing and details for aquatic plant control and habitat.
                   </p>
                   <a
-                    href="https://myfwc.com/fishing/freshwater/sites-forecast/nw/rodman-res/"
+                    href="https://myfwc.com/fishing/freshwater/sites-forecasts/ne/rodman-reservoir/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
                     View FWC Page
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">Florida State Parks — Rodman Reservoir Drawdown FAQ</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Official information including drawdown schedule details and reasons.
+                  </p>
+                  <a
+                    href="https://www.floridastateparks.org/learn/rodman-reservoir-drawdown-faq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    View FAQ
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
