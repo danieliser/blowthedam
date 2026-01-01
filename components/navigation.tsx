@@ -2,18 +2,35 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/manatees", label: "Manatees" },
-    { href: "/water-quality", label: "Water Quality" },
-    { href: "/take-action", label: "Take Action" },
-    { href: "/sources", label: "Sources" },
+  const navGroups = [
+    { href: "/", label: "Home", type: "link" as const },
+    {
+      label: "The Issues",
+      type: "dropdown" as const,
+      items: [
+        { href: "/manatees", label: "Manatees" },
+        { href: "/water-quality", label: "Water Quality & Springs" },
+      ],
+    },
+    {
+      label: "Learn More",
+      type: "dropdown" as const,
+      items: [
+        { href: "/vision", label: "Vision for Restoration" },
+        { href: "/economic-impact", label: "Economic Impact" },
+        { href: "/timeline", label: "History & Timeline" },
+        { href: "/faq", label: "FAQ" },
+      ],
+    },
+    { href: "/sources", label: "Sources", type: "link" as const },
+    { href: "/take-action", label: "Take Action", type: "link" as const },
   ]
 
   return (
@@ -26,16 +43,49 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-              >
-                {item.label}
-              </Link>
-            ))}
+          <div className="hidden lg:flex lg:items-center lg:gap-6">
+            {navGroups.map((item) => {
+              if (item.type === "link") {
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              } else {
+                return (
+                  <div
+                    key={item.label}
+                    className="relative"
+                    onMouseEnter={() => setOpenDropdown(item.label)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
+                    <button className="flex items-center gap-1 text-sm font-medium text-foreground transition-colors hover:text-primary">
+                      {item.label}
+                      <ChevronDown size={16} />
+                    </button>
+                    {openDropdown === item.label && (
+                      <div className="absolute left-0 top-full mt-2 w-56 rounded-md border border-border bg-background shadow-lg">
+                        <div className="py-1">
+                          {item.items.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className="block px-4 py-2 text-sm text-foreground hover:bg-muted"
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+            })}
             <Button size="sm" className="bg-secondary hover:bg-secondary/90">
               Support Now
             </Button>
@@ -44,7 +94,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden rounded-md p-2 text-foreground hover:bg-muted"
+            className="lg:hidden rounded-md p-2 text-foreground hover:bg-muted"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -54,18 +104,38 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border bg-background">
           <div className="space-y-1 px-4 pb-3 pt-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navGroups.map((item) => {
+              if (item.type === "link") {
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              } else {
+                return (
+                  <div key={item.label}>
+                    <div className="px-3 py-2 text-sm font-semibold text-muted-foreground">{item.label}</div>
+                    {item.items.map((subItem) => (
+                      <Link
+                        key={subItem.href}
+                        href={subItem.href}
+                        className="block rounded-md px-6 py-2 text-base font-medium text-foreground hover:bg-muted"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )
+              }
+            })}
             <div className="pt-2">
               <Button size="sm" className="w-full bg-secondary hover:bg-secondary/90">
                 Support Now
