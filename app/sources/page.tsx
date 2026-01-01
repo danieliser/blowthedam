@@ -251,7 +251,7 @@ export default function SourcesPage() {
                     How nutrients (N & P) fuel blooms and sources of nutrient pollution.
                   </p>
                   <a
-                    href="https://stjohnsriverkeeper.org/issues/water-quality/"
+                    href="https://stjohnsriverkeeper.org/algae-blooms-what-you-need-to-know/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -267,7 +267,7 @@ export default function SourcesPage() {
                     Official water management district information on algae blooms and nutrient dynamics.
                   </p>
                   <a
-                    href="https://www.sjrwmd.com/waterquality/"
+                    href="https://www.sjrwmd.com/education/algae/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -283,7 +283,7 @@ export default function SourcesPage() {
                     Submerged aquatic vegetation decline post-Irma with light limitation and eelgrass habitat details.
                   </p>
                   <a
-                    href="https://stjohnsriverkeeper.org/issues/habitat/"
+                    href="https://stjohnsriverkeeper.org/about-us/our-issues/submerged-aquatic-vegetation-sav/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -307,6 +307,42 @@ export default function SourcesPage() {
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
                     View Journal Archive
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">
+                    Journal of Aquatic Plant Management (APMS, 2020) — SAV patterns + tannins/light discussion
+                  </h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Peer-reviewed research on SAV patterns, tannins, and light dynamics.
+                  </p>
+                  <a
+                    href="https://apms.org/wp-content/uploads/japm-58-02-135-full.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    View PDF
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">
+                    SJRWMD Streamlines — Tracking Aquatic Vegetation in the Lower St. Johns River
+                  </h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Hurricane Irma's impact: tannins/dark water → light limitation → SAV stress.
+                  </p>
+                  <a
+                    href="https://www.sjrwmd.com/streamlines/beneath-the-surface-tracking-aquatic-vegetation-in-the-lower-st-johns-river/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    Read Streamlines Article
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
