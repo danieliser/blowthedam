@@ -30,7 +30,14 @@ export default function TakeActionPage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-secondary py-16 text-secondary-foreground sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/pristine-florida-spring-with-lush-vegetation.jpg"
+            alt="Pristine Florida spring"
+            className="h-full w-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl">Take Action Today</h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed">

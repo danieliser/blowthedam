@@ -11,7 +11,14 @@ export default function ManateesPage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-primary py-16 text-primary-foreground sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/manatee-swimming-in-clear-spring-water.jpg"
+            alt="Manatee in clear spring water"
+            className="h-full w-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl">
               Manatees Need Natural Habitat
@@ -27,24 +34,34 @@ export default function ManateesPage() {
       {/* The Reality Section */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground">The Manatee Crisis</h2>
-            <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
-              <p>
-                Florida's manatees are facing unprecedented challenges. Over 1,000 manatees died in 2021 alone, with
-                hundreds more in subsequent years. The primary cause: loss of seagrass beds and warm-water refuges that
-                manatees depend on for survival.
-              </p>
-              <p>
-                Manatees need two critical elements to thrive: <strong>warm-water refuges</strong> during winter months
-                and <strong>abundant food sources</strong> like seagrass throughout the year. The Ocklawaha River basin,
-                with its connection to Silver Springs and other natural springs, historically provided both.
-              </p>
-              <p>
-                The question isn't whether Rodman Reservoir can support some manatees—it's whether we should force them
-                to rely on an artificial, managed impoundment when we could restore an entire connected river-spring
-                ecosystem.
-              </p>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground">The Manatee Crisis</h2>
+              <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
+                <p>
+                  Florida's manatees are facing unprecedented challenges. Over 1,000 manatees died in 2021 alone, with
+                  hundreds more in subsequent years. The primary cause: loss of seagrass beds and warm-water refuges
+                  that manatees depend on for survival.
+                </p>
+                <p>
+                  Manatees need two critical elements to thrive: <strong>warm-water refuges</strong> during winter
+                  months and <strong>abundant food sources</strong> like seagrass throughout the year. The Ocklawaha
+                  River basin, with its connection to Silver Springs and other natural springs, historically provided
+                  both.
+                </p>
+                <p>
+                  The question isn't whether Rodman Reservoir can support some manatees—it's whether we should force
+                  them to rely on an artificial, managed impoundment when we could restore an entire connected
+                  river-spring ecosystem.
+                </p>
+              </div>
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img
+                src="/manatee-swimming-in-clear-spring-water.jpg"
+                alt="Manatee swimming in crystal clear spring water"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -213,6 +230,12 @@ export default function ManateesPage() {
                 <Link href="/water-quality">Learn About Water Quality</Link>
               </Button>
             </div>
+            <p className="mt-8 text-sm text-primary-foreground/80">
+              Want to verify these claims?{" "}
+              <Link href="/sources" className="underline hover:text-primary-foreground">
+                View our sources and references
+              </Link>
+            </p>
           </div>
         </div>
       </section>

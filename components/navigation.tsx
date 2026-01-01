@@ -13,6 +13,7 @@ export function Navigation() {
     { href: "/manatees", label: "Manatees" },
     { href: "/water-quality", label: "Water Quality" },
     { href: "/take-action", label: "Take Action" },
+    { href: "/sources", label: "Sources" },
   ]
 
   return (

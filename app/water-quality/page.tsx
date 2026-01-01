@@ -11,7 +11,14 @@ export default function WaterQualityPage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-primary py-16 text-primary-foreground sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/crystal-clear-florida-spring-water-flowing.jpg"
+            alt="Crystal clear Florida spring water"
+            className="h-full w-full object-cover opacity-20"
+          />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl">
               Restoring Water Quality and Springs
@@ -27,18 +34,27 @@ export default function WaterQualityPage() {
       {/* Problem Overview */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground">The Water Quality Challenge</h2>
-            <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
-              <p>
-                Florida's waters are facing unprecedented challenges. Algae blooms are worsening in the St. Johns River
-                and Indian River Lagoon. Spring flows are declining. Nutrient pollution from stormwater, agriculture,
-                and wastewater continues to degrade our most precious water resources.
-              </p>
-              <p>
-                Both supporters and opponents of Rodman Dam agree that water quality is declining. The question is
-                whether maintaining an artificial reservoir helps or hinders long-term ecosystem health.
-              </p>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lg:order-1">
+              <img
+                src="/pristine-florida-spring-with-lush-vegetation.jpg"
+                alt="Pristine Florida spring with lush vegetation"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="lg:order-2">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground">The Water Quality Challenge</h2>
+              <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
+                <p>
+                  Florida's waters are facing unprecedented challenges. Algae blooms are worsening in the St. Johns
+                  River and Indian River Lagoon. Spring flows are declining. Nutrient pollution from stormwater,
+                  agriculture, and wastewater continues to degrade our most precious water resources.
+                </p>
+                <p>
+                  Both supporters and opponents of Rodman Dam agree that water quality is declining. The question is
+                  whether maintaining an artificial reservoir helps or hinders long-term ecosystem health.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -171,28 +187,37 @@ export default function WaterQualityPage() {
               </div>
             </div>
 
-            <Card className="h-fit border-secondary bg-secondary/5 p-6">
-              <h3 className="text-xl font-bold text-foreground">How Springs Work</h3>
-              <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
-                <p>
-                  Springs occur where the aquifer intersects the land surface, allowing groundwater to discharge
-                  naturally. Spring flow depends on the hydraulic gradient—the difference in water pressure between the
-                  aquifer and surface water.
-                </p>
-                <p>
-                  When a reservoir artificially raises surface water levels, it can reduce the hydraulic gradient and
-                  suppress spring discharge. Removing the dam would restore natural gradients and allow springs to flow
-                  more freely.
-                </p>
-                <div className="mt-6 rounded-lg bg-secondary/10 p-4">
-                  <AlertCircle className="mb-2 h-5 w-5 text-secondary" />
-                  <p className="text-xs">
-                    <strong>Note:</strong> Short-term fluctuations can occur during transitions, but the focus should be
-                    on long-term restoration of natural spring function, not quarterly variations.
-                  </p>
-                </div>
+            <div className="h-fit space-y-6">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
+                  src="/crystal-clear-florida-spring-water-flowing.jpg"
+                  alt="Clear spring water flowing naturally"
+                  className="h-full w-full object-cover"
+                />
               </div>
-            </Card>
+              <Card className="border-secondary bg-secondary/5 p-6">
+                <h3 className="text-xl font-bold text-foreground">How Springs Work</h3>
+                <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    Springs occur where the aquifer intersects the land surface, allowing groundwater to discharge
+                    naturally. Spring flow depends on the hydraulic gradient—the difference in water pressure between
+                    the aquifer and surface water.
+                  </p>
+                  <p>
+                    When a reservoir artificially raises surface water levels, it can reduce the hydraulic gradient and
+                    suppress spring discharge. Removing the dam would restore natural gradients and allow springs to
+                    flow more freely.
+                  </p>
+                  <div className="mt-6 rounded-lg bg-secondary/10 p-4">
+                    <AlertCircle className="mb-2 h-5 w-5 text-secondary" />
+                    <p className="text-xs">
+                      <strong>Note:</strong> Short-term fluctuations can occur during transitions, but the focus should
+                      be on long-term restoration of natural spring function, not quarterly variations.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -240,6 +265,12 @@ export default function WaterQualityPage() {
                 <Link href="/">Back to Home</Link>
               </Button>
             </div>
+            <p className="mt-8 text-sm text-primary-foreground/80">
+              Want to verify these claims?{" "}
+              <Link href="/sources" className="underline hover:text-primary-foreground">
+                View our sources and references
+              </Link>
+            </p>
           </div>
         </div>
       </section>
