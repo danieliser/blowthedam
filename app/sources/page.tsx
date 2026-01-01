@@ -81,7 +81,7 @@ export default function SourcesPage() {
                     Comprehensive recovery plan addressing warm-water refuges and habitat connectivity.
                   </p>
                   <a
-                    href="https://www.fws.gov/sites/default/files/documents/florida-manatee-recovery-plan-third-revision-2001.pdf"
+                    href="https://ecos.fws.gov/docs/recovery_plan/011030.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -97,7 +97,7 @@ export default function SourcesPage() {
                     Policy and advocacy discussion explicitly referencing breaching the dam and restoring access.
                   </p>
                   <a
-                    href="https://savethemanatee.org/statement-on-the-rodman-reservoir/"
+                    href="https://savethemanatee.org/protecting-manatees-with-policy-and-purpose/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -115,7 +115,7 @@ export default function SourcesPage() {
                     Analysis of manatee habitat potential and benefits of dam removal.
                   </p>
                   <a
-                    href="https://defenders.org/newsroom/great-florida-riverway-would-help-endangered-species-and-boost-economy"
+                    href="https://defenders.org/blog/2020/11/great-florida-riverway-great-potential-manatees"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
