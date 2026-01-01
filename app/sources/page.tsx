@@ -362,7 +362,7 @@ export default function SourcesPage() {
                     Comprehensive narrative with key figures: 7,500 acres flooded, 20 springs submerged.
                   </p>
                   <a
-                    href="https://www.wuft.org/news/2018/01/08/on-both-sides-of-the-dam/"
+                    href="https://www.wuft.org/on-both-sides-of-the-dam"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
@@ -398,7 +398,7 @@ export default function SourcesPage() {
                     Overview and argument that Rodman is a vestigial canal-era dam without modern purpose.
                   </p>
                   <a
-                    href="https://www.audubon.org/news/has-one-florida-dams-day-finally-come"
+                    href="https://www.audubon.org/magazine/has-one-florida-dams-day-finally-come"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
