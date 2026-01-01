@@ -15,7 +15,7 @@ export default function ManateesPage() {
           <img
             src="/manatee-swimming-in-clear-spring-water.jpg"
             alt="Manatee in clear spring water"
-            className="h-full w-full object-cover opacity-20"
+            className="h-full w-full object-cover opacity-30"
           />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

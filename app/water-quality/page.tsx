@@ -15,7 +15,7 @@ export default function WaterQualityPage() {
           <img
             src="/crystal-clear-florida-spring-water-flowing.jpg"
             alt="Crystal clear Florida spring water"
-            className="h-full w-full object-cover opacity-20"
+            className="h-full w-full object-cover opacity-30"
           />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

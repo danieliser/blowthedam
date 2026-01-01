@@ -111,7 +111,7 @@ export default function HomePage() {
 
             {/* Springs Card */}
             <Card className="group overflow-hidden border-border bg-card transition-all hover:shadow-lg sm:col-span-2 lg:col-span-1">
-              <Link href="/water-quality#springs" className="block">
+              <Link href="/sources" className="block">
                 <div className="aspect-video relative overflow-hidden bg-muted">
                   <img
                     src="/pristine-florida-spring-with-lush-vegetation.jpg"
@@ -122,14 +122,14 @@ export default function HomePage() {
                 <div className="p-6">
                   <div className="mb-3 flex items-center gap-2 text-primary">
                     <Waves className="h-6 w-6" />
-                    <h3 className="text-xl font-bold">Restore Springs</h3>
+                    <h3 className="text-xl font-bold">Evidence-Based</h3>
                   </div>
                   <p className="text-pretty leading-relaxed text-muted-foreground">
-                    Florida's legendary springs are suffering. Dam removal would help restore natural spring flows and
-                    the incredible biodiversity they support.
+                    Our advocacy is backed by peer-reviewed research, government reports, and scientific studies.
+                    Explore the sources behind the restoration movement.
                   </p>
                   <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
-                    Discover spring restoration
+                    View our sources
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>
