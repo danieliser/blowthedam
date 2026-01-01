@@ -68,17 +68,19 @@ export function Navigation() {
                       <ChevronDown size={16} />
                     </button>
                     {openDropdown === item.label && (
-                      <div className="absolute left-0 top-full mt-2 w-56 rounded-md border border-border bg-background shadow-lg">
-                        <div className="py-1">
-                          {item.items.map((subItem) => (
-                            <Link
-                              key={subItem.href}
-                              href={subItem.href}
-                              className="block px-4 py-2 text-sm text-foreground hover:bg-muted"
-                            >
-                              {subItem.label}
-                            </Link>
-                          ))}
+                      <div className="absolute left-0 top-full pt-2 w-56">
+                        <div className="rounded-md border border-border bg-background shadow-lg">
+                          <div className="py-1">
+                            {item.items.map((subItem) => (
+                              <Link
+                                key={subItem.href}
+                                href={subItem.href}
+                                className="block px-4 py-2 text-sm text-foreground hover:bg-muted"
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     )}
