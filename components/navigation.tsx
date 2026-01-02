@@ -16,13 +16,15 @@ export function Navigation() {
       type: "dropdown" as const,
       items: [
         { href: "/manatees", label: "Manatees" },
-        { href: "/water-quality", label: "Water Quality & Springs" },
+        { href: "/water-quality", label: "Water Quality" },
+        { href: "/springs", label: "Springs" },
       ],
     },
     {
       label: "Learn More",
       type: "dropdown" as const,
       items: [
+        { href: "/evidence", label: "Evidence Summary" }, // Added Evidence Summary page
         { href: "/vision", label: "Vision for Restoration" },
         { href: "/economic-impact", label: "Economic Impact" },
         { href: "/timeline", label: "History & Timeline" },

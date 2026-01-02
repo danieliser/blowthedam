@@ -1,5 +1,7 @@
 import { Navigation } from "@/components/navigation"
-import { DollarSign, TrendingUp, Users, Briefcase } from "lucide-react"
+import { DollarSign, TrendingUp, Users, Briefcase, BookOpen } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function EconomicImpactPage() {
   return (
@@ -24,16 +26,135 @@ export default function EconomicImpactPage() {
           <div className="prose prose-lg max-w-none">
             <p className="text-muted-foreground leading-relaxed">
               The economic argument for Ocklawaha River restoration isn't just about environmental benefits—it's about
-              smart fiscal policy. Studies of dam removal projects nationwide consistently show positive economic
-              returns through job creation, increased property values, and sustainable tourism. Meanwhile, maintaining
-              Rodman Dam requires perpetual taxpayer spending with no return on investment.
+              smart fiscal policy. Peer-reviewed research comparing recreation economics at free-flowing river sites vs.
+              reservoir sites shows that restoration can shift recreation patterns while generating economic
+              contributions. Meanwhile, maintaining Rodman Dam requires perpetual taxpayer spending with no return on
+              investment.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Peer-Reviewed Research Section */}
+      <section className="bg-gradient-to-b from-muted/30 to-background py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 mb-4">
+              <BookOpen className="h-5 w-5 text-primary" />
+              <span className="text-sm font-medium text-primary">Peer-Reviewed Research</span>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">What Academic Studies Actually Show</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The most rigorous economic comparison comes from university researchers
+            </p>
+          </div>
+
+          <Card className="border-2 border-secondary bg-gradient-to-br from-secondary/10 to-background p-8 shadow-lg">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-secondary/20">
+                <BookOpen className="h-6 w-6 text-secondary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground">
+                  Borisova et al. (2019): Economic Value of Free-Flowing vs. Impounded River Portions
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Published in <em>Review of Regional Studies</em> (peer-reviewed academic journal)
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">What the Study Found:</h4>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex gap-3">
+                    <span className="text-secondary">•</span>
+                    <span>
+                      <strong>Free-flowing river sites generate greater economic contributions</strong> from recreation
+                      compared to reservoir sites when measuring visitor spending and economic value
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-secondary">•</span>
+                    <span>
+                      Restoration would likely <strong>increase some recreation activities</strong> (paddling, nature
+                      tourism, spring access) while potentially reducing others (reservoir-style fishing)
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-secondary">•</span>
+                    <span>
+                      The study models <strong>how visitation might change</strong> under different restoration
+                      scenarios with various uncertainty ranges—showing economists take these tradeoffs seriously
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-secondary">•</span>
+                    <span>
+                      Researchers recommend steps to <strong>preserve fishing opportunities</strong> during transitions,
+                      acknowledging that changes would occur but need not eliminate all fishing
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border-l-4 border-l-secondary bg-secondary/5 p-4">
+                <p className="text-sm text-muted-foreground">
+                  <strong>Why this matters:</strong> This is the most rigorous "apples-to-apples" recreation economics
+                  comparison available. Unlike advocacy documents or general claims, it uses established economic
+                  methods to estimate visitor spending patterns under different scenarios. It doesn't claim restoration
+                  has zero costs—but it shows the economic story is about <em>shifting</em> recreation types, not simple
+                  loss.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs text-muted-foreground">
+                  <strong>Full citation:</strong> Bi, X., Borisova, T., & Hodges, A. W. (2019). Economic value of
+                  visitation to free-flowing and impounded portions of the Ocklawaha River in Florida: Implications for
+                  management of river flow. <em>Review of Regional Studies</em>, 49(2), 244–268.{" "}
+                  <Link href="/sources" className="text-secondary underline hover:text-secondary/80">
+                    View source
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
+            <Card className="border border-border bg-card p-6 shadow-sm">
+              <h4 className="font-semibold text-foreground mb-3">Peer-Reviewed Fishing Research</h4>
+              <p className="text-sm text-muted-foreground mb-3">
+                Nagid et al. (2015) in the <em>North American Journal of Fisheries Management</em> shows drawdowns can
+                create strong largemouth bass year-classes—evidence that the "keep" side uses to support reservoir
+                management.
+              </p>
+              <p className="text-xs text-muted-foreground">
+                This is legitimate research showing the reservoir <em>can</em> produce quality fishing under active
+                management. The economic question is whether this benefit outweighs restoration's broader economic gains
+                from river-based recreation.
+              </p>
+            </Card>
+
+            <Card className="border border-border bg-card p-6 shadow-sm">
+              <h4 className="font-semibold text-foreground mb-3">Policy Analysis vs. Academic Research</h4>
+              <p className="text-sm text-muted-foreground mb-3">
+                Florida TaxWatch (2022) presents economic scenarios favoring retention. This is useful for understanding
+                policy arguments but is not peer-reviewed academic research—it's advocacy analysis with specific
+                assumptions.
+              </p>
+              <p className="text-xs text-muted-foreground">
+                When weighing economic evidence, peer-reviewed studies carry more weight than think-tank reports because
+                they undergo rigorous independent review.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Cost Comparison */}
-      <section className="py-16 bg-gradient-to-b from-background to-muted/30">
+      <section className="border-t-4 border-primary py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">The Real Costs</h2>
 
@@ -113,7 +234,7 @@ export default function EconomicImpactPage() {
       </section>
 
       {/* Economic Benefits */}
-      <section className="border-t-4 border-primary bg-gradient-to-b from-muted/50 to-background py-16">
+      <section className="border-t-4 border-secondary bg-gradient-to-b from-muted/50 to-background py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Economic Benefits of Restoration</h2>
 
@@ -288,7 +409,8 @@ export default function EconomicImpactPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Invest in Florida's Water Future</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
-            Restoration isn't just environmentally responsible—it's economically smart. Every dollar invested in natural
+            Restoration isn't just environmentally responsible—it's economically smart. Peer-reviewed research shows
+            free-flowing river recreation generates greater economic value, and every dollar invested in natural
             ecosystems returns multiple times over through tourism, property values, and ecosystem services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

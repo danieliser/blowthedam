@@ -13,19 +13,19 @@ export default function WaterQualityPage() {
       <section className="relative overflow-hidden bg-primary py-16 text-primary-foreground sm:py-24">
         <div className="absolute inset-0 z-0">
           <img
-            src="/crystal-clear-florida-spring-water-flowing.jpg"
-            alt="Crystal clear Florida spring water"
-            className="h-full w-full object-cover opacity-30"
+            src="/florida-river-ecosystem.jpg"
+            alt="Healthy Florida river ecosystem"
+            className="h-full w-full object-cover opacity-40"
           />
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl">
-              Restoring Water Quality and Springs
+              Water Quality & Ecosystem Health
             </h1>
             <p className="mt-6 text-pretty text-lg leading-relaxed">
-              A free-flowing river can help restore natural water filtration, improve spring flows, and support a
-              healthier ecosystem for all of Florida.
+              Natural rivers filter water, support biodiversity, and adapt to change. Artificial reservoirs require
+              constant management and can exacerbate pollution problems.
             </p>
           </div>
         </div>
@@ -37,8 +37,8 @@ export default function WaterQualityPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lg:order-1">
               <img
-                src="/pristine-florida-spring-with-lush-vegetation.jpg"
-                alt="Pristine Florida spring with lush vegetation"
+                src="/healthy-river-restoration.jpg"
+                alt="Healthy restored river ecosystem"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -46,13 +46,18 @@ export default function WaterQualityPage() {
               <h2 className="text-3xl font-bold tracking-tight text-foreground">The Water Quality Challenge</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
-                  Florida's waters are facing unprecedented challenges. Algae blooms are worsening in the St. Johns
-                  River and Indian River Lagoon. Spring flows are declining. Nutrient pollution from stormwater,
-                  agriculture, and wastewater continues to degrade our most precious water resources.
+                  Florida's waters face unprecedented challenges. Algae blooms are worsening in the St. Johns River and
+                  Indian River Lagoon. Submerged aquatic vegetation (SAV) is declining. Nutrient pollution from
+                  stormwater, agriculture, and wastewater continues to degrade our waterways.
                 </p>
                 <p>
                   Both supporters and opponents of Rodman Dam agree that water quality is declining. The question is
                   whether maintaining an artificial reservoir helps or hinders long-term ecosystem health.
+                </p>
+                <p>
+                  The evidence suggests that while reservoirs can temporarily store some nutrients, they don't solve the
+                  root causes of pollution. Natural rivers with healthy wetlands and riparian zones provide superior
+                  long-term filtration.
                 </p>
               </div>
             </div>
@@ -93,9 +98,10 @@ export default function WaterQualityPage() {
                   <div className="mt-4 flex items-start gap-2">
                     <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
-                      <strong>Fact:</strong> Natural river systems with healthy riparian zones and wetlands provide
-                      superior long-term filtration. A restored Ocklawaha would support natural nutrient processing
-                      without requiring ongoing management interventions.
+                      <strong>Fact:</strong> Research shows that phosphorus can be retained in some reservoirs under
+                      specific conditions. However, this doesn't address watershed-wide pollution sources or provide
+                      long-term ecosystem resilience. Natural river systems with healthy riparian zones and wetlands
+                      provide superior filtration without requiring constant management.
                     </p>
                   </div>
                 </div>
@@ -116,15 +122,16 @@ export default function WaterQualityPage() {
                   </h3>
                   <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                     This claim assumes unmanaged, instantaneous removal. In reality, restoration would be phased with
-                    careful monitoring. Water already moves from Rodman into the St. Johns through drawdowns and
-                    releases—the flow isn't new. Short-term pulses can be managed with adaptive strategies.
+                    careful monitoring. Short-term pulses are a legitimate concern—which is why studies, monitoring, and
+                    adaptive management are essential parts of any restoration plan.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
                     <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
-                      <strong>Fact:</strong> The real question is short-term vs. long-term impacts. While transitions
-                      require careful management, a self-maintaining river system is ultimately more resilient than an
-                      aging reservoir requiring constant intervention.
+                      <strong>Fact:</strong> Water already moves from Rodman into the St. Johns through drawdowns and
+                      releases. The key question is short-term management vs. long-term ecosystem health. A
+                      self-maintaining natural river is ultimately more resilient than an aging reservoir requiring
+                      perpetual intervention.
                     </p>
                   </div>
                 </div>
@@ -141,19 +148,21 @@ export default function WaterQualityPage() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-foreground">
-                    Myth: "The dam is the only thing recharging the aquifer"
+                    Myth: "Algae blooms are caused by removal, not the reservoir"
                   </h3>
                   <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-                    This claim lacks evidence. Even if a reservoir could contribute to aquifer recharge, the compacted
-                    muck and sediment layer on the pool floor likely reduces infiltration. Recharge would be uneven and
-                    concentrated at channels, karst formations, and spring vents—not uniformly across the pool.
+                    Algae blooms are driven by watershed-wide nutrient inputs combined with warm water, low light
+                    penetration, and slow-moving conditions—all of which can be exacerbated in reservoirs. The St. Johns
+                    River already experiences blooms; attributing them solely to potential restoration ignores systemic
+                    pollution sources.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
                     <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
-                      <strong>Fact:</strong> Florida's aquifer is recharged through rainfall and natural percolation
-                      across the entire watershed—not by artificial reservoirs. Restoring natural hydrology supports
-                      more consistent, widespread recharge.
+                      <strong>Fact:</strong> Natural rivers with adequate flow can help reduce bloom severity by
+                      preventing stagnation, supporting SAV that filters water, and maintaining healthier dissolved
+                      oxygen levels. The focus should be on watershed-wide nutrient reduction, not preserving artificial
+                      impoundments.
                     </p>
                   </div>
                 </div>
@@ -163,58 +172,63 @@ export default function WaterQualityPage() {
         </div>
       </section>
 
-      {/* Springs Restoration Section */}
-      <section id="springs" className="py-16 sm:py-24">
+      {/* SAV & Light Limitation */}
+      <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground">Restoring Florida's Springs</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground">Submerged Aquatic Vegetation (SAV)</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
-                  Florida's springs are legendary—crystal-clear waters that once attracted visitors from around the
-                  world. But spring flows have been declining for decades, and many once-pristine springs are now choked
-                  with algae and vegetation.
+                  SAV—underwater grasses like eelgrass and tape grass—are critical for ecosystem health. They provide
+                  food for manatees, habitat for fish, and natural filtration by absorbing nutrients and stabilizing
+                  sediment.
                 </p>
                 <p>
-                  Silver Springs, once one of Florida's crown jewels, is a shadow of its former self. The connection
-                  between the Ocklawaha River and Silver Springs complex has been disrupted by the dam.
+                  However, SAV requires sunlight to grow. When water is dark from tannins (naturally-occurring organic
+                  compounds from vegetation decay) or turbid from sediment and algae, light can't penetrate deep enough
+                  to support healthy SAV beds.
                 </p>
                 <p>
-                  While opponents claim that "spring flows won't increase," evidence from drawdown periods shows that
-                  lowering the reservoir pool can increase spring discharge due to hydraulic gradient effects. The goal
-                  isn't overnight transformation—it's long-term restoration of natural spring function.
+                  Both reservoir and river systems face SAV challenges. The question is which system—natural or
+                  managed—provides better conditions for long-term SAV recovery. Evidence suggests that flowing rivers
+                  with healthy riparian buffers support more resilient ecosystems.
                 </p>
               </div>
             </div>
 
-            <div className="h-fit space-y-6">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <img
-                  src="/crystal-clear-florida-spring-water-flowing.jpg"
-                  alt="Clear spring water flowing naturally"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <Card className="border-secondary bg-secondary/5 p-6">
-                <h3 className="text-xl font-bold text-foreground">How Springs Work</h3>
+            <div className="space-y-6">
+              <Card className="border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6 shadow-md">
+                <h3 className="text-lg font-bold text-foreground">Tannins vs. Algae</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    Springs occur where the aquifer intersects the land surface, allowing groundwater to discharge
-                    naturally. Spring flow depends on the hydraulic gradient—the difference in water pressure between
-                    the aquifer and surface water.
+                    Tannins are natural—they come from decaying leaves and organic matter and give Florida's rivers
+                    their characteristic tea-colored appearance. Tannins limit light but aren't a pollution problem.
                   </p>
                   <p>
-                    When a reservoir artificially raises surface water levels, it can reduce the hydraulic gradient and
-                    suppress spring discharge. Removing the dam would restore natural gradients and allow springs to
-                    flow more freely.
+                    Algae blooms, however, are driven by excess nutrients (nitrogen and phosphorus) and indicate
+                    ecosystem imbalance. Dense algae blocks light, depletes oxygen, and harms water quality far more
+                    than natural tannins.
                   </p>
-                  <div className="mt-6 rounded-lg bg-secondary/10 p-4">
-                    <AlertCircle className="mb-2 h-5 w-5 text-secondary" />
-                    <p className="text-xs">
-                      <strong>Note:</strong> Short-term fluctuations can occur during transitions, but the focus should
-                      be on long-term restoration of natural spring function, not quarterly variations.
-                    </p>
-                  </div>
+                  <p>
+                    Natural rivers balance tannins with flow and seasonal variation. Stagnant reservoirs can amplify
+                    both tannin accumulation and algae growth, creating compounding light limitation problems.
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6 shadow-md">
+                <h3 className="text-lg font-bold text-foreground">Hurricane Irma's Impact</h3>
+                <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    After Hurricane Irma in 2017, massive inputs of vegetation and organic matter from flooding
+                    significantly increased tannin levels and darkened the water throughout the St. Johns system. This
+                    stressed SAV by reducing light penetration.
+                  </p>
+                  <p>
+                    This demonstrates how major disturbances affect both reservoir and river systems. The question is
+                    recovery trajectory: Does a natural system rebound better than a managed one?
+                  </p>
                 </div>
               </Card>
             </div>
@@ -223,7 +237,7 @@ export default function WaterQualityPage() {
       </section>
 
       {/* The Real Solution */}
-      <section className="bg-muted py-16 sm:py-24">
+      <section className="bg-gradient-to-b from-muted/50 to-background py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground">Natural Systems Are More Resilient</h2>
@@ -233,9 +247,18 @@ export default function WaterQualityPage() {
               self-maintaining river ecosystem that can adapt and recover over time.
             </p>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-foreground">
-              A restored Ocklawaha River would reconnect the St. Johns to the Silver River system, improve spring flows,
-              support natural filtration, and create a more resilient watershed for future generations.
+              A restored Ocklawaha River would support natural filtration through wetlands and riparian zones, reduce
+              stagnation that fuels algae blooms, and create a more resilient watershed for future generations.
             </p>
+            <div className="mt-10 rounded-lg border-l-4 border-l-secondary bg-secondary/5 p-6 text-left">
+              <AlertCircle className="mb-4 h-6 w-6 text-secondary" />
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                <strong>Important context:</strong> Water quality challenges exist throughout Florida. No single action
+                will solve systemic pollution. But choosing restoration over perpetual reservoir management gives the
+                ecosystem the best chance for long-term health. Short-term transitions require monitoring and adaptive
+                strategies—which is why careful planning and phased implementation matter.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -244,10 +267,9 @@ export default function WaterQualityPage() {
       <section className="bg-primary py-16 text-primary-foreground sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Support River Restoration</h2>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Support Natural Water Quality</h2>
             <p className="mt-6 text-pretty text-lg leading-relaxed">
-              Cleaner water and healthier springs start with restoring natural river systems. Add your voice to the call
-              for Rodman Dam removal.
+              Healthier ecosystems start with natural river systems. Add your voice to the call for Rodman Dam removal.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>

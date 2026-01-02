@@ -56,12 +56,62 @@ export default function ManateesPage() {
                 </p>
               </div>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img
-                src="/manatee-swimming-in-clear-spring-water.jpg"
-                alt="Manatee swimming in crystal clear spring water"
-                className="h-full w-full object-cover"
-              />
+            <div className="space-y-6">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <img
+                  src="/manatee-swimming-in-clear-spring-water.jpg"
+                  alt="Manatee swimming in crystal clear spring water"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <Card className="border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6 shadow-md">
+                <h3 className="text-lg font-bold text-foreground">Why Springs Matter</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  On January 1, 2026, Blue Spring State Park counted <strong>697 manatees</strong> seeking warm-water
+                  refuge in a single spring. This demonstrates how critical accessible warm-water refuges are for
+                  manatee survival during winter months.
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Restoring the Ocklawaha's connection to Silver Springs and other warm-water refuges would expand this
+                  critical habitat network, giving manatees more options and reducing crowding at limited sites.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Documented Manatee Harm at Dam/Lock Systems */}
+      <section className="bg-gradient-to-b from-background to-muted/30 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <div className="rounded-lg border-l-4 border-l-destructive bg-card p-8 shadow-lg">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-destructive/10">
+                  <AlertCircle className="h-6 w-6 text-destructive" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground">Documented Manatee Harm at Dam/Lock Systems</h2>
+                  <div className="mt-4 space-y-4 text-pretty leading-relaxed">
+                    <p className="text-foreground">
+                      Multiple verified and undetermined manatee mortalities have been documented in the vicinity of the
+                      Buckman Lock and Rodman Reservoir area. A University of Florida-hosted report cites carcass damage
+                      consistent with trauma from the Rodman Reservoir and Buckman Lock structural mechanisms.
+                    </p>
+                    <p className="text-muted-foreground">
+                      According to the Marine Mammal Commission's Florida springs and manatee report, "the dam and lock
+                      systems have been responsible for manatee mortality." The report explicitly notes that removal
+                      would <strong>eliminate the only known source of water-control-structure mortality</strong> in the
+                      St. Johns River system.
+                    </p>
+                    <p className="text-muted-foreground">
+                      This isn't speculation—these are documented deaths caused by infrastructure that restoration would
+                      remove. When we talk about "saving manatees," this is exactly what we mean: eliminating known
+                      mortality sources and restoring safe passage through natural river corridors.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
