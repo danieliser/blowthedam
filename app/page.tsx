@@ -11,8 +11,13 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary" />
+        <div className="absolute inset-0">
+          <img
+            src="/ocklawaha-river-flowing.jpg"
+            alt="Ocklawaha River"
+            className="h-full w-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/70 to-primary" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
@@ -109,27 +114,27 @@ export default function HomePage() {
               </Link>
             </Card>
 
-            {/* Springs Card */}
+            {/* Dam Costs & Infrastructure Card */}
             <Card className="group overflow-hidden border-border bg-card transition-all hover:shadow-lg sm:col-span-2 lg:col-span-1">
-              <Link href="/sources" className="block">
+              <Link href="/dam-costs" className="block">
                 <div className="aspect-video relative overflow-hidden bg-muted">
                   <img
-                    src="/pristine-florida-spring-with-lush-vegetation.jpg"
-                    alt="Florida springs"
+                    src="/healthy-river-restoration.jpg"
+                    alt="Dam infrastructure"
                     className="h-full w-full object-cover transition-transform group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <div className="mb-3 flex items-center gap-2 text-primary">
                     <Waves className="h-6 w-6" />
-                    <h3 className="text-xl font-bold">Evidence-Based</h3>
+                    <h3 className="text-xl font-bold">Obsolete & Costly</h3>
                   </div>
                   <p className="text-pretty leading-relaxed text-muted-foreground">
-                    Our advocacy is backed by peer-reviewed research, government reports, and scientific studies.
-                    Explore the sources behind the restoration movement.
+                    The dam has no purpose and requires perpetual maintenance at taxpayer expense. It faces inevitable
+                    failure while blocking ecosystem restoration.
                   </p>
                   <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
-                    View our sources
+                    See the costs
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>

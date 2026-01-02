@@ -18,13 +18,14 @@ export function Navigation() {
         { href: "/manatees", label: "Manatees" },
         { href: "/water-quality", label: "Water Quality" },
         { href: "/springs", label: "Springs" },
+        { href: "/dam-costs", label: "Dam Costs & Infrastructure" }, // Added new Dam Costs page to Issues dropdown
       ],
     },
     {
       label: "Learn More",
       type: "dropdown" as const,
       items: [
-        { href: "/evidence", label: "Evidence Summary" }, // Added Evidence Summary page
+        { href: "/evidence", label: "Evidence Summary" },
         { href: "/vision", label: "Vision for Restoration" },
         { href: "/economic-impact", label: "Economic Impact" },
         { href: "/timeline", label: "History & Timeline" },

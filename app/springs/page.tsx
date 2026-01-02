@@ -32,7 +32,7 @@ export default function SpringsPage() {
       {/* Springs Crisis Overview */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground">The Springs Crisis</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
@@ -62,20 +62,23 @@ export default function SpringsPage() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <Card className="border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6 shadow-md">
-                <div className="flex items-start gap-3">
-                  <Droplets className="mt-1 h-6 w-6 flex-shrink-0 text-secondary" />
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground">Why Springs Matter for Manatees</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      Springs provide year-round warm water (72°F) that manatees depend on for winter survival. Without
-                      access to warm-water refuges, manatees can die from cold stress. Connecting the Ocklawaha to the
-                      Silver Springs system would expand critical manatee habitat.
-                    </p>
-                  </div>
-                </div>
-              </Card>
             </div>
+          </div>
+
+          <div className="mt-12">
+            <Card className="border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6 shadow-md">
+              <div className="flex items-start gap-3">
+                <Droplets className="mt-1 h-6 w-6 flex-shrink-0 text-secondary" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground">Why Springs Matter for Manatees</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Springs provide year-round warm water (72°F) that manatees depend on for winter survival. Without
+                    access to warm-water refuges, manatees can die from cold stress. Connecting the Ocklawaha to the
+                    Silver Springs system would expand critical manatee habitat.
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>

@@ -34,7 +34,7 @@ export default function WaterQualityPage() {
       {/* Problem Overview */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lg:order-1">
               <img
                 src="/healthy-river-restoration.jpg"
@@ -175,7 +175,7 @@ export default function WaterQualityPage() {
       {/* SAV & Light Limitation */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground">Submerged Aquatic Vegetation (SAV)</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
