@@ -63,13 +63,12 @@ export default function SourcesPage() {
                     Analysis of Rodman/Ocklawaha manatee use and restoration implications.
                   </p>
                   <a
-                    href="https://myfwc.com/media/7274/manatee_rodman.pdf"
+                    href="https://ufdcimages.uflib.ufl.edu/IR/00/01/17/90/00001/4358SenrProjFinalRptMatthews.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                    className="mt-3 inline-flex items-center gap-1 text-sm text-primary hover:underline"
                   >
-                    View Document (PDF)
-                    <ExternalLink className="h-4 w-4" />
+                    View Report (PDF) <ExternalLink className="h-3 w-3" />
                   </a>
                 </Card>
 
@@ -579,6 +578,23 @@ export default function SourcesPage() {
                     className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
                   >
                     View Dam Removal Database
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-foreground">FWC — Mercury Testing & Advisory Context</h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Florida Fish and Wildlife Conservation Commission's mercury testing program for freshwater fish,
+                    providing context for fish consumption advisories.
+                  </p>
+                  <a
+                    href="https://myfwc.com/research/freshwater/freshwater-projects/water/mercury-testing/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline"
+                  >
+                    View Mercury Testing Program
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </Card>
