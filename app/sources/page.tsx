@@ -4,6 +4,7 @@ import { BookOpen } from 'lucide-react';
 import { getSourcesByCategory } from '@/lib/sources';
 import { SourceCategorySection } from '@/components/source-category-section';
 import { SourcesClientWrapper } from '@/components/sources-client-wrapper';
+import { SourcesSidebar } from '@/components/sources-sidebar';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -17,6 +18,11 @@ export default async function SourcesPage() {
     'economics-fishing',
     'additional-resources',
   ];
+
+  // Build ordered categories array for sidebar
+  const orderedCategories = categoryOrder
+    .map(slug => sourcesByCategory[slug]?.category)
+    .filter(Boolean);
 
   return (
     <SourcesClientWrapper>
@@ -65,26 +71,36 @@ export default async function SourcesPage() {
         </div>
       </section>
 
-      {/* Grouped Sources */}
+      {/* Two Column Layout: Sidebar + Sources */}
       <section className="pb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-3xl font-bold tracking-tight text-foreground">
-            Verifiable Sources
-          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 lg:gap-12">
+            {/* Sidebar - Hidden on mobile, sticky on desktop */}
+            <div className="hidden lg:block">
+              <SourcesSidebar categories={orderedCategories} />
+            </div>
 
-          <div className="space-y-12">
-            {categoryOrder.map((categorySlug) => {
-              const data = sourcesByCategory[categorySlug];
-              if (!data) return null;
+            {/* Main Content */}
+            <div className="min-w-0">
+              <h2 className="mb-8 text-3xl font-bold tracking-tight text-foreground">
+                Verifiable Sources
+              </h2>
 
-              return (
-                <SourceCategorySection
-                  key={categorySlug}
-                  category={data.category}
-                  sources={data.sources}
-                />
-              );
-            })}
+              <div className="space-y-12">
+                {categoryOrder.map((categorySlug) => {
+                  const data = sourcesByCategory[categorySlug];
+                  if (!data) return null;
+
+                  return (
+                    <SourceCategorySection
+                      key={categorySlug}
+                      category={data.category}
+                      sources={data.sources}
+                    />
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>

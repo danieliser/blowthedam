@@ -124,10 +124,14 @@
 
 @keyframes highlight-glow {
   0% {
-    background-color: oklch(0.92 0.08 200);
+    background-color: oklch(0.72 0.15 200 / 0.25);
+    box-shadow: 0 0 0 4px oklch(0.72 0.15 200 / 0.4), 0 4px 16px oklch(0.72 0.15 200 / 0.3);
+    transform: scale(1.02);
   }
   100% {
     background-color: transparent;
+    box-shadow: 0 0 0 0 oklch(0.72 0.15 200 / 0);
+    transform: scale(1);
   }
 }
 

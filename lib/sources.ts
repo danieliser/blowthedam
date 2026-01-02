@@ -65,10 +65,13 @@ export async function getSourcesByCategory(): Promise<SourcesByCategory> {
     return {};
   }
 
-  // Get all sources
+  // Get all sources with passages
   const { data: sources, error: srcError } = await supabase
     .from('sources')
-    .select('*')
+    .select(`
+      *,
+      passages:source_passages(*)
+    `)
     .order('sort_order', { ascending: true });
 
   if (srcError || !sources) {
@@ -84,7 +87,7 @@ export async function getSourcesByCategory(): Promise<SourcesByCategory> {
     if (categorySources.length > 0) {
       result[category.slug] = {
         category,
-        sources: categorySources,
+        sources: categorySources as any, // Type assertion needed due to passages
       };
     }
   }
