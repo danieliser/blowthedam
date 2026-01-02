@@ -42,6 +42,8 @@ export default function ManateesPage() {
                   Florida's manatees are facing unprecedented challenges.{" "}
                   <a
                     href="/sources#usfws-recovery-plan"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: USFWS Florida Manatee Recovery Plan"
                   >
@@ -54,6 +56,8 @@ export default function ManateesPage() {
                   Manatees need two critical elements to thrive:{" "}
                   <a
                     href="/sources#usfws-recovery-plan"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: USFWS Florida Manatee Recovery Plan"
                   >
@@ -101,6 +105,8 @@ export default function ManateesPage() {
               <p className="text-pretty leading-relaxed text-foreground">
                 <a
                   href="/sources#marine-mammal-commission"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                   title="Source: Marine Mammal Commission Taylor Report"
                 >
@@ -129,6 +135,8 @@ export default function ManateesPage() {
                     <p className="text-foreground">
                       <a
                         href="/sources#kent-smith-1997"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                         title="Source: Kent Smith (1997) FDEP Report"
                       >
@@ -142,6 +150,8 @@ export default function ManateesPage() {
                       According to the{" "}
                       <a
                         href="/sources#marine-mammal-commission"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                         title="Source: Marine Mammal Commission Taylor Report (2006)"
                       >
@@ -199,6 +209,8 @@ export default function ManateesPage() {
                       <strong>Fact:</strong>{" "}
                       <a
                         href="/sources#marine-mammal-commission"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                         title="Source: Marine Mammal Commission Taylor Report"
                       >
@@ -229,6 +241,8 @@ export default function ManateesPage() {
                     habitat. The reservoir requires{" "}
                     <a
                       href="/sources#sjrwmd-drawdown"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: SJRWMD Drawdown Fact Sheet"
                     >
@@ -242,6 +256,8 @@ export default function ManateesPage() {
                       <strong>Fact:</strong>{" "}
                       <a
                         href="/sources#defenders-of-wildlife"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                         title="Source: Defenders of Wildlife - Great Florida Riverway"
                       >
@@ -271,6 +287,8 @@ export default function ManateesPage() {
                   <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                     <a
                       href="/sources#marine-mammal-commission"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: Marine Mammal Commission Taylor Report"
                     >
@@ -306,6 +324,8 @@ export default function ManateesPage() {
                 The key to manatee recovery isn't managing an artificial reservoir—it's{" "}
                 <a
                   href="/sources#marine-mammal-commission"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                   title="Source: Marine Mammal Commission Taylor Report on thermal network"
                 >
@@ -317,6 +337,8 @@ export default function ManateesPage() {
               <p>
                 <a
                   href="/sources#save-the-manatee"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                   title="Source: Save the Manatee Club - Policy & Purpose"
                 >

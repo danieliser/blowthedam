@@ -47,6 +47,8 @@ export default function TimelinePage() {
       source: (
         <a
           href="/sources#smith-1997"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-xs text-secondary underline hover:text-secondary/80"
           title="Kent Smith (1997) - FDEP Report"
         >

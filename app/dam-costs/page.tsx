@@ -33,6 +33,8 @@ export default function DamCostsPage() {
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
               <a
                 href="/sources#wuft-dam-history"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                 title="Source: WUFT - On Both Sides of the Dam"
               >
@@ -53,6 +55,8 @@ export default function DamCostsPage() {
                 <p className="leading-relaxed">
                   <a
                     href="/sources#audubon-magazine"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: Audubon Magazine - Has One Florida Dam's Day Finally Come?"
                   >
@@ -97,6 +101,8 @@ export default function DamCostsPage() {
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 <a
                   href="/sources#ufifas-caip"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                   title="Source: UF/IFAS CAIP - Drawdowns Every 3-4 Years"
                 >
@@ -112,6 +118,8 @@ export default function DamCostsPage() {
               <p className="mt-4 leading-relaxed text-muted-foreground">
                 <a
                   href="/sources#audubon-magazine"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                   title="Source: Audubon Magazine - Dam Cost Analysis"
                 >

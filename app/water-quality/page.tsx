@@ -48,6 +48,8 @@ export default function WaterQualityPage() {
                 <p>
                   <a
                     href="/sources#stjohns-riverkeeper-algae"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: St. Johns Riverkeeper - Algae Blooms Explainer"
                   >
@@ -57,6 +59,8 @@ export default function WaterQualityPage() {
                   .{" "}
                   <a
                     href="/sources#stjohns-riverkeeper-sav"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: St. Johns Riverkeeper - SAV Information"
                   >
@@ -196,6 +200,8 @@ export default function WaterQualityPage() {
                 <p>
                   <a
                     href="/sources#stjohns-riverkeeper-sav"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: St. Johns Riverkeeper - SAV & Eelgrass"
                   >
@@ -225,6 +231,8 @@ export default function WaterQualityPage() {
                   <p>
                     <a
                       href="/sources#apms-journal"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: APMS Journal - SAV Patterns and Tannins"
                     >
@@ -236,6 +244,8 @@ export default function WaterQualityPage() {
                   <p>
                     <a
                       href="/sources#stjohns-riverkeeper-algae"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: St. Johns Riverkeeper - Algae & Nutrients"
                     >
@@ -257,6 +267,8 @@ export default function WaterQualityPage() {
                   <p>
                     <a
                       href="/sources#sjrwmd-streamlines"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: SJRWMD Streamlines - Tracking Aquatic Vegetation"
                     >

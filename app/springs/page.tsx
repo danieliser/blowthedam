@@ -41,6 +41,8 @@ export default function SpringsPage() {
                   bottom, teeming with fish and visited by hundreds of manatees seeking warmth in winter.{" "}
                   <a
                     href="/sources#florida-springs-institute"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: Florida Springs Institute Ocklawaha Synoptic Study"
                   >
@@ -51,6 +53,8 @@ export default function SpringsPage() {
                 <p>
                   <a
                     href="/sources#wuft-dam-history"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: WUFT - On Both Sides of the Dam"
                   >
@@ -63,6 +67,8 @@ export default function SpringsPage() {
                 <p>
                   <a
                     href="/sources#florida-springs-institute"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                     title="Source: Florida Springs Institute - Hydraulic Gradient Research"
                   >
@@ -95,6 +101,8 @@ export default function SpringsPage() {
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     <a
                       href="/sources#marine-mammal-commission"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: Marine Mammal Commission Taylor Report"
                     >
@@ -128,6 +136,8 @@ export default function SpringsPage() {
                   <p>
                     <a
                       href="/sources#florida-springs-institute"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: Florida Springs Institute Synoptic Study"
                     >
@@ -154,6 +164,8 @@ export default function SpringsPage() {
                   <p>
                     <a
                       href="/sources#sjrwmd-drawdown"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: SJRWMD Technical Fact Sheet on Drawdowns"
                     >
@@ -176,6 +188,8 @@ export default function SpringsPage() {
                   <p>
                     <a
                       href="/sources#marine-mammal-commission"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: Marine Mammal Commission Taylor Report on thermal network"
                     >
@@ -227,6 +241,8 @@ export default function SpringsPage() {
                       <strong>Fact:</strong>{" "}
                       <a
                         href="/sources#marine-mammal-commission"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                         title="Source: Marine Mammal Commission Taylor Report"
                       >
@@ -286,6 +302,8 @@ export default function SpringsPage() {
                     This claim ignores{" "}
                     <a
                       href="/sources#sjrwmd-drawdown"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
                       title="Source: SJRWMD Drawdown Data"
                     >

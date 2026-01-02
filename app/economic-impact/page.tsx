@@ -37,6 +37,8 @@ export default function EconomicImpactPage() {
               smart fiscal policy.{" "}
               <a
                 href="/sources#borisova-2019"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-secondary underline hover:text-secondary/80"
                 title="Borisova et al. (2019) - Economic Value Study"
               >
@@ -129,7 +131,12 @@ export default function EconomicImpactPage() {
                   <strong>Full citation:</strong> Bi, X., Borisova, T., & Hodges, A. W. (2019). Economic value of
                   visitation to free-flowing and impounded portions of the Ocklawaha River in Florida: Implications for
                   management of river flow. <em>Review of Regional Studies</em>, 49(2), 244–268.{" "}
-                  <Link href="/sources#borisova-2019" className="text-secondary underline hover:text-secondary/80">
+                  <Link
+                    href="/sources#borisova-2019"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-secondary underline hover:text-secondary/80"
+                  >
                     View source
                   </Link>
                 </p>
@@ -143,6 +150,8 @@ export default function EconomicImpactPage() {
               <p className="text-sm text-muted-foreground mb-3">
                 <a
                   href="/sources#nagid-2015"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary underline hover:text-secondary/80"
                   title="Nagid et al. (2015) - Bass Fishery Research"
                 >
@@ -163,6 +172,8 @@ export default function EconomicImpactPage() {
               <p className="text-sm text-muted-foreground mb-3">
                 <a
                   href="/sources#florida-taxwatch-2022"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary underline hover:text-secondary/80"
                   title="Florida TaxWatch (2022) - Economic Analysis"
                 >
