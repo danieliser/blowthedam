@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { DollarSign, AlertTriangle, TrendingUp, Calendar } from "lucide-react"
 import Link from "next/link"
+import { Citation } from "@/components/citation"
 
 export default function DamCostsPage() {
   return (
@@ -31,15 +32,9 @@ export default function DamCostsPage() {
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">An Obsolete Structure</h2>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-              <a
-                href="/sources#wuft-dam-history"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                title="Source: WUFT - On Both Sides of the Dam"
-              >
+              <Citation slug="wuft-dam">
                 The Rodman Dam was built as part of the Cross Florida Barge Canal, a project abandoned in 1971
-              </a>
+              </Citation>
               . The dam has no navigation purpose, serves no flood control function, and was explicitly built as a
               temporary structure. Yet it remains, requiring perpetual maintenance at taxpayer expense.
             </p>
@@ -53,15 +48,9 @@ export default function DamCostsPage() {
               </div>
               <div className="space-y-4 text-muted-foreground">
                 <p className="leading-relaxed">
-                  <a
-                    href="/sources#audubon-magazine"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                    title="Source: Audubon Magazine - Has One Florida Dam's Day Finally Come?"
-                  >
+                  <Citation slug="audubon-dam">
                     The Cross Florida Barge Canal was halted by President Nixon in 1971 after environmental concerns
-                  </a>
+                  </Citation>
                   . The Rodman Dam lost its reason to exist before completion.
                 </p>
                 <p className="leading-relaxed">
@@ -99,15 +88,9 @@ export default function DamCostsPage() {
               <DollarSign className="mb-4 h-10 w-10 text-primary" />
               <h3 className="text-xl font-bold text-foreground">Ongoing Maintenance Costs</h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                <a
-                  href="/sources#ufifas-caip"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                  title="Source: UF/IFAS CAIP - Drawdowns Every 3-4 Years"
-                >
+                <Citation slug="uf-caip">
                   The dam requires recurring drawdowns every 3-4 years
-                </a>
+                </Citation>
                 , gate repairs, sediment management, and structure inspections. These costs compound indefinitely.
               </p>
             </Card>
@@ -116,16 +99,10 @@ export default function DamCostsPage() {
               <AlertTriangle className="mb-4 h-10 w-10 text-destructive" />
               <h3 className="text-xl font-bold text-foreground">Major Repair Estimates</h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                <a
-                  href="/sources#audubon-magazine"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                  title="Source: Audubon Magazine - Dam Cost Analysis"
-                >
+                <Citation slug="audubon-dam">
                   Policy analyses estimate repair costs in the millions. The Florida TaxWatch report (2022) projects
                   substantial capital expenses just to keep the aging structure operational
-                </a>
+                </Citation>
                 .
               </p>
             </Card>

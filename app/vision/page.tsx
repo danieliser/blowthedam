@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import Image from "next/image"
 import { X, Check } from "lucide-react"
+import { Citation } from "@/components/citation"
 
 export default function VisionPage() {
   const comparisons = [
@@ -297,13 +298,9 @@ export default function VisionPage() {
               <p className="text-sm text-muted-foreground mb-3">
                 During experimental drawdowns, native river vegetation and fish communities quickly re-established,
                 demonstrating the Ocklawaha's natural resilience.{" "}
-                <a
-                  href="/sources#sjrwmd-drawdown"
-                  className="text-secondary underline hover:text-secondary/80"
-                  title="SJRWMD Drawdown Studies"
-                >
+                <Citation slug="sjrwmd-drawdown">
                   View research
-                </a>
+                </Citation>
               </p>
               <p className="text-sm text-primary font-semibold">Timeline: Native species returned within months</p>
             </div>

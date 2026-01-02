@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, ArrowRight, Scale } from "lucide-react"
 import Link from "next/link"
+import { Citation } from "@/components/citation"
 
 export default function EvidencePage() {
   return (
@@ -91,13 +92,9 @@ export default function EvidencePage() {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Multiple verified and undetermined manatee mortalities documented at Buckman Lock/Rodman area, with
                   carcass damage consistent with structural trauma.{" "}
-                  <a
-                    href="/sources#mmc-2006"
-                    className="text-secondary underline hover:text-secondary/80"
-                    title="Marine Mammal Commission (2006) - Taylor Report"
-                  >
+                  <Citation slug="marine-mammal">
                     Marine Mammal Commission report
-                  </a>{" "}
+                  </Citation>{" "}
                   explicitly states removal would eliminate the only known source of water-control-structure mortality
                   in the St. Johns River system.
                 </p>
@@ -132,13 +129,9 @@ export default function EvidencePage() {
               <Card className="border-l-4 border-l-secondary bg-card p-6 shadow-md">
                 <h4 className="font-bold text-foreground">4. Water-Quality Tradeoffs Were Studied</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  <a
-                    href="/sources#florida-springs-institute"
-                    className="text-secondary underline hover:text-secondary/80"
-                    title="Florida Springs Institute - Ocklawaha Synoptic Study"
-                  >
+                  <Citation slug="fl-springs-institute">
                     Florida Springs Institute
-                  </a>{" "}
+                  </Citation>{" "}
                   documents that additional water-quality studies were required and completed during restoration
                   planning, with findings that restoration benefits outweighed short-term water-quality impacts. This
                   shows the concern was addressed, not ignored.
@@ -161,22 +154,10 @@ export default function EvidencePage() {
               <Card className="border-l-4 border-l-muted-foreground bg-card p-6 shadow-md">
                 <h4 className="font-bold text-foreground">1. Rodman Is a Major Fishery/Recreation Asset</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  <a
-                    href="/sources#fwc-rodman"
-                    className="text-secondary underline hover:text-secondary/80"
-                    title="FWC - Rodman Reservoir Information"
-                  >
+                  <Citation slug="fwc-rodman">
                     FWC
-                  </a>{" "}
-                  promotes Rodman as a significant reservoir fishing destination.{" "}
-                  <a
-                    href="/sources#nagid-2015"
-                    className="text-secondary underline hover:text-secondary/80"
-                    title="Nagid et al. (2015) - Fishing Research"
-                  >
-                    Peer-reviewed research
-                  </a>{" "}
-                  shows drawdowns can create strong largemouth bass recruitment under managed conditions.
+                  </Citation>{" "}
+                  promotes Rodman as a significant reservoir fishing destination. Peer-reviewed research shows drawdowns can create strong largemouth bass recruitment under managed conditions.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: FWC management pages, Nagid et al. 2015 (North American Journal of Fisheries Management)

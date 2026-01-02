@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import Image from "next/image"
+import { Citation } from "@/components/citation"
 
 export default function TimelinePage() {
   const timelineEvents = [
@@ -45,15 +46,9 @@ export default function TimelinePage() {
         "FDEP report by Kent Smith documents manatee mortality at the Buckman Lock/Rodman Dam system, with carcass damage consistent with trauma from water-control structures. This becomes key evidence for restoration advocacy.",
       impact: "negative",
       source: (
-        <a
-          href="/sources#smith-1997"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs text-secondary underline hover:text-secondary/80"
-          title="Kent Smith (1997) - FDEP Report"
-        >
+        <Citation slug="smith-1997">
           View source
-        </a>
+        </Citation>
       ),
     },
     {

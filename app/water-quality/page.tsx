@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { AlertCircle, ArrowRight, CheckCircle, XCircle } from "lucide-react"
 import Link from "next/link"
+import { Citation } from "@/components/citation"
 
 export default function WaterQualityPage() {
   return (
@@ -46,26 +47,14 @@ export default function WaterQualityPage() {
               <h2 className="text-3xl font-bold tracking-tight text-foreground">The Water Quality Challenge</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
-                  <a
-                    href="/sources#stjohns-riverkeeper-algae"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                    title="Source: St. Johns Riverkeeper - Algae Blooms Explainer"
-                  >
+                  <Citation slug="riverkeeper-algae">
                     Florida's waters face unprecedented challenges. Algae blooms are worsening in the St. Johns River
                     and Indian River Lagoon
-                  </a>
+                  </Citation>
                   .{" "}
-                  <a
-                    href="/sources#stjohns-riverkeeper-sav"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                    title="Source: St. Johns Riverkeeper - SAV Information"
-                  >
+                  <Citation slug="riverkeeper-sav">
                     Submerged aquatic vegetation (SAV) is declining
-                  </a>
+                  </Citation>
                   . Nutrient pollution from stormwater, agriculture, and wastewater continues to degrade our waterways.
                 </p>
                 <p>
@@ -198,17 +187,11 @@ export default function WaterQualityPage() {
               <h2 className="text-3xl font-bold tracking-tight text-foreground">Submerged Aquatic Vegetation (SAV)</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
-                  <a
-                    href="/sources#stjohns-riverkeeper-sav"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                    title="Source: St. Johns Riverkeeper - SAV & Eelgrass"
-                  >
+                  <Citation slug="riverkeeper-sav">
                     SAV—underwater grasses like eelgrass and tape grass—are critical for ecosystem health. They provide
                     food for manatees, habitat for fish, and natural filtration by absorbing nutrients and stabilizing
                     sediment
-                  </a>
+                  </Citation>
                   .
                 </p>
                 <p>
@@ -229,29 +212,17 @@ export default function WaterQualityPage() {
                 <h3 className="text-lg font-bold text-foreground">Tannins vs. Algae</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    <a
-                      href="/sources#apms-journal"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                      title="Source: APMS Journal - SAV Patterns and Tannins"
-                    >
+                    <Citation slug="apms-journal">
                       Tannins are natural—they come from decaying leaves and organic matter and give Florida's rivers
                       their characteristic tea-colored appearance. Tannins limit light but aren't a pollution problem
-                    </a>
+                    </Citation>
                     .
                   </p>
                   <p>
-                    <a
-                      href="/sources#stjohns-riverkeeper-algae"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                      title="Source: St. Johns Riverkeeper - Algae & Nutrients"
-                    >
+                    <Citation slug="riverkeeper-algae">
                       Algae blooms, however, are driven by excess nutrients (nitrogen and phosphorus) and indicate
                       ecosystem imbalance
-                    </a>
+                    </Citation>
                     . Dense algae blocks light, depletes oxygen, and harms water quality far more than natural tannins.
                   </p>
                   <p>
@@ -265,17 +236,11 @@ export default function WaterQualityPage() {
                 <h3 className="text-lg font-bold text-foreground">Hurricane Irma's Impact</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    <a
-                      href="/sources#sjrwmd-streamlines"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                      title="Source: SJRWMD Streamlines - Tracking Aquatic Vegetation"
-                    >
+                    <Citation slug="sjrwmd-sav">
                       After Hurricane Irma in 2017, massive inputs of vegetation and organic matter from flooding
                       significantly increased tannin levels and darkened the water throughout the St. Johns system. This
                       stressed SAV by reducing light penetration
-                    </a>
+                    </Citation>
                     .
                   </p>
                   <p>

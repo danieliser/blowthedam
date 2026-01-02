@@ -8,7 +8,8 @@ import type { CitationData, SourceType } from '@/types/database-helpers';
 import { cn } from '@/lib/utils';
 
 interface CitationProps {
-  sourceSlug: string;
+  sourceSlug?: string;
+  slug?: string; // Alias for sourceSlug
   passageId?: string;
   children: React.ReactNode;
   className?: string;
@@ -43,12 +44,20 @@ const sourceTypeColors: Record<SourceType, string> = {
 };
 
 export function Citation({
-  sourceSlug,
+  sourceSlug: sourceSlugProp,
+  slug,
   passageId,
   children,
   className,
   showPopover = true,
 }: CitationProps) {
+  // Support both sourceSlug and slug props (slug is an alias)
+  const sourceSlug = sourceSlugProp || slug;
+
+  if (!sourceSlug) {
+    throw new Error('Citation component requires either sourceSlug or slug prop');
+  }
+
   const [citation, setCitation] = useState<CitationData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
