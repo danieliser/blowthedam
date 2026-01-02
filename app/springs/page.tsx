@@ -38,18 +38,39 @@ export default function SpringsPage() {
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
                   Florida's springs were once world-famous—crystal-clear waters so pure you could see straight to the
-                  bottom, teeming with fish and visited by hundreds of manatees seeking warmth in winter. Today, many
-                  springs are shadows of their former selves.
+                  bottom, teeming with fish and visited by hundreds of manatees seeking warmth in winter.{" "}
+                  <a
+                    href="/sources#florida-springs-institute"
+                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                    title="Source: Florida Springs Institute Ocklawaha Synoptic Study"
+                  >
+                    Today, many springs are shadows of their former selves
+                  </a>
+                  .
                 </p>
                 <p>
-                  <strong>Silver Springs</strong>, once one of Florida's crown jewels and a major tourist destination,
-                  has experienced dramatic flow declines. The connection between the Ocklawaha River and the Silver
-                  River/Silver Springs complex has been disrupted by Rodman Dam.
+                  <a
+                    href="/sources#wuft-dam-history"
+                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                    title="Source: WUFT - On Both Sides of the Dam"
+                  >
+                    <strong>Silver Springs</strong>, once one of Florida's crown jewels and a major tourist destination,
+                    has experienced dramatic flow declines
+                  </a>
+                  . The connection between the Ocklawaha River and the Silver River/Silver Springs complex has been
+                  disrupted by Rodman Dam.
                 </p>
                 <p>
-                  Spring flows are declining across Florida due to over-pumping, development, and disrupted hydrology.
-                  Rodman Dam compounds the problem by artificially raising surface water levels, which can suppress
-                  spring discharge by reducing the hydraulic gradient.
+                  <a
+                    href="/sources#florida-springs-institute"
+                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                    title="Source: Florida Springs Institute - Hydraulic Gradient Research"
+                  >
+                    Spring flows are declining across Florida due to over-pumping, development, and disrupted hydrology.
+                    Rodman Dam compounds the problem by artificially raising surface water levels, which can suppress
+                    spring discharge by reducing the hydraulic gradient
+                  </a>
+                  .
                 </p>
               </div>
             </div>
@@ -68,13 +89,19 @@ export default function SpringsPage() {
           <div className="mt-12">
             <Card className="border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6 shadow-md">
               <div className="flex items-start gap-3">
-                <Droplets className="mt-1 h-6 w-6 flex-shrink-0 text-secondary" />
+                <Droplets className="h-6 w-6 flex-shrink-0 text-secondary" />
                 <div>
                   <h3 className="text-lg font-bold text-foreground">Why Springs Matter for Manatees</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Springs provide year-round warm water (72°F) that manatees depend on for winter survival. Without
-                    access to warm-water refuges, manatees can die from cold stress. Connecting the Ocklawaha to the
-                    Silver Springs system would expand critical manatee habitat.
+                    <a
+                      href="/sources#marine-mammal-commission"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: Marine Mammal Commission Taylor Report"
+                    >
+                      Springs provide year-round warm water (72°F) that manatees depend on for winter survival
+                    </a>
+                    . Without access to warm-water refuges, manatees can die from cold stress. Connecting the Ocklawaha
+                    to the Silver Springs system would expand critical manatee habitat.
                   </p>
                 </div>
               </div>
@@ -99,9 +126,16 @@ export default function SpringsPage() {
                 <h3 className="text-xl font-bold text-foreground">The Hydraulic Gradient</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    Springs occur where groundwater from the Floridan Aquifer discharges naturally to the surface. The
-                    flow rate depends on the <strong>hydraulic gradient</strong>—the difference in water pressure
-                    between the aquifer and the surface water.
+                    <a
+                      href="/sources#florida-springs-institute"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: Florida Springs Institute Synoptic Study"
+                    >
+                      Springs occur where groundwater from the Floridan Aquifer discharges naturally to the surface. The
+                      flow rate depends on the <strong>hydraulic gradient</strong>—the difference in water pressure
+                      between the aquifer and the surface water
+                    </a>
+                    .
                   </p>
                   <p>
                     <strong>Higher surface water = Lower gradient = Reduced spring flow</strong>
@@ -118,9 +152,16 @@ export default function SpringsPage() {
                 <h3 className="text-xl font-bold text-foreground">Evidence from Drawdowns</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    During drawdown periods (when the reservoir is lowered for vegetation management), spring discharge
-                    increases. This demonstrates that removing the dam's influence on surface water elevation can
-                    restore more natural spring function.
+                    <a
+                      href="/sources#sjrwmd-drawdown"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: SJRWMD Technical Fact Sheet on Drawdowns"
+                    >
+                      During drawdown periods (when the reservoir is lowered for vegetation management), spring
+                      discharge increases
+                    </a>
+                    . This demonstrates that removing the dam's influence on surface water elevation can restore more
+                    natural spring function.
                   </p>
                   <p>
                     While opponents claim "spring flows won't increase," the evidence from drawdowns contradicts this.
@@ -133,9 +174,16 @@ export default function SpringsPage() {
                 <h3 className="text-xl font-bold text-foreground">Silver Springs Connection</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    The Silver River connects Silver Springs to the Ocklawaha River. Before the dam, this was a
-                    free-flowing corridor where manatees could travel between warm-water refuges and the St. Johns River
-                    system.
+                    <a
+                      href="/sources#marine-mammal-commission"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: Marine Mammal Commission Taylor Report on thermal network"
+                    >
+                      The Silver River connects Silver Springs to the Ocklawaha River. Before the dam, this was a
+                      free-flowing corridor where manatees could travel between warm-water refuges and the St. Johns
+                      River system
+                    </a>
+                    .
                   </p>
                   <p>
                     Restoring the Ocklawaha would reconnect this critical pathway, expand manatee habitat, and support
@@ -174,11 +222,19 @@ export default function SpringsPage() {
                     springs play as warm-water refuges for manatees and as ecological anchors for river health.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
+                    <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
-                      <strong>Fact:</strong> Florida's springs are essential manatee habitat. On January 1, 2026, Blue
-                      Spring State Park counted 697 manatees—demonstrating how critical accessible warm-water refuges
-                      are for survival. Restoring Ocklawaha connectivity would expand this vital network.
+                      <strong>Fact:</strong>{" "}
+                      <a
+                        href="/sources#marine-mammal-commission"
+                        className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                        title="Source: Marine Mammal Commission Taylor Report"
+                      >
+                        Florida's springs are essential manatee habitat
+                      </a>
+                      . On January 1, 2026, Blue Spring State Park counted 697 manatees—demonstrating how critical
+                      accessible warm-water refuges are for survival. Restoring Ocklawaha connectivity would expand this
+                      vital network.
                     </p>
                   </div>
                 </div>
@@ -203,7 +259,7 @@ export default function SpringsPage() {
                     compared to a natural river with permeable channels and karst features.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
+                    <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
                       <strong>Fact:</strong> Natural rivers support aquifer recharge through distributed percolation.
                       The dam artificially elevates surface water, which can suppress spring discharge—the opposite of
@@ -227,12 +283,19 @@ export default function SpringsPage() {
                     Myth: "Spring flows won't increase if the dam is removed"
                   </h3>
                   <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-                    This claim ignores evidence from drawdown periods when lowering the reservoir increases spring
-                    discharge. While restoration won't produce instant results, the long-term trajectory favors natural
-                    spring function over managed suppression.
+                    This claim ignores{" "}
+                    <a
+                      href="/sources#sjrwmd-drawdown"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: SJRWMD Drawdown Data"
+                    >
+                      evidence from drawdown periods when lowering the reservoir increases spring discharge
+                    </a>
+                    . While restoration won't produce instant results, the long-term trajectory favors natural spring
+                    function over managed suppression.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
+                    <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
                       <strong>Fact:</strong> Restoration is about long-term recovery, not quarterly metrics. Allowing
                       natural hydrology to reassert itself gives springs the best chance for sustained recovery.

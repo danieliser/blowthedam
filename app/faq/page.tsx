@@ -7,8 +7,12 @@ export default function FAQPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-16 sm:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+          <div className="absolute inset-0 bg-[url('/ocklawaha-river-flowing.jpg')] bg-cover bg-center opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 text-balance">
             Frequently Asked Questions
           </h1>
@@ -75,7 +79,7 @@ export default function FAQPage() {
             {/* Manatees Usage */}
             <AccordionItem value="manatees-history" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
-                Didn't manatees never use the Ocklawaha before the dam?
+                Did manatees historically use the Ocklawaha River before the dam was built?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed pt-4">
                 <p className="mb-3">

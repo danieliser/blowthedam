@@ -216,8 +216,8 @@ export default function VisionPage() {
                     </div>
                     <ul className="space-y-3">
                       {comparison.current.points.map((point, i) => (
-                        <li key={i} className="flex gap-3">
-                          <span className="text-red-500 mt-1 flex-shrink-0">•</span>
+                        <li key={i} className="flex items-center gap-3">
+                          <span className="text-red-500 flex-shrink-0">•</span>
                           <span className="text-sm text-muted-foreground">{point}</span>
                         </li>
                       ))}
@@ -234,8 +234,8 @@ export default function VisionPage() {
                     </div>
                     <ul className="space-y-3">
                       {comparison.restored.points.map((point, i) => (
-                        <li key={i} className="flex gap-3">
-                          <span className="text-green-500 mt-1 flex-shrink-0">✓</span>
+                        <li key={i} className="flex items-center gap-3">
+                          <span className="text-green-500 flex-shrink-0">✓</span>
                           <span className="text-sm text-muted-foreground">{point}</span>
                         </li>
                       ))}

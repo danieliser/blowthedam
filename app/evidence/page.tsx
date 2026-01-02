@@ -51,7 +51,7 @@ export default function EvidencePage() {
 
             <Card className="mt-8 border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6">
               <div className="flex items-start gap-3">
-                <AlertCircle className="mt-1 h-6 w-6 flex-shrink-0 text-secondary" />
+                <AlertCircle className="h-6 w-6 flex-shrink-0 text-secondary" />
                 <div>
                   <h3 className="font-bold text-foreground">What We Mean by "Stronger Evidence"</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

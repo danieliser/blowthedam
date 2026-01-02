@@ -46,9 +46,23 @@ export default function WaterQualityPage() {
               <h2 className="text-3xl font-bold tracking-tight text-foreground">The Water Quality Challenge</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
-                  Florida's waters face unprecedented challenges. Algae blooms are worsening in the St. Johns River and
-                  Indian River Lagoon. Submerged aquatic vegetation (SAV) is declining. Nutrient pollution from
-                  stormwater, agriculture, and wastewater continues to degrade our waterways.
+                  <a
+                    href="/sources#stjohns-riverkeeper-algae"
+                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                    title="Source: St. Johns Riverkeeper - Algae Blooms Explainer"
+                  >
+                    Florida's waters face unprecedented challenges. Algae blooms are worsening in the St. Johns River
+                    and Indian River Lagoon
+                  </a>
+                  .{" "}
+                  <a
+                    href="/sources#stjohns-riverkeeper-sav"
+                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                    title="Source: St. Johns Riverkeeper - SAV Information"
+                  >
+                    Submerged aquatic vegetation (SAV) is declining
+                  </a>
+                  . Nutrient pollution from stormwater, agriculture, and wastewater continues to degrade our waterways.
                 </p>
                 <p>
                   Both supporters and opponents of Rodman Dam agree that water quality is declining. The question is
@@ -96,7 +110,7 @@ export default function WaterQualityPage() {
                     A reservoir doesn't eliminate nutrients—it temporarily stores them.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
+                    <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
                       <strong>Fact:</strong> Research shows that phosphorus can be retained in some reservoirs under
                       specific conditions. However, this doesn't address watershed-wide pollution sources or provide
@@ -126,7 +140,7 @@ export default function WaterQualityPage() {
                     adaptive management are essential parts of any restoration plan.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
+                    <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
                       <strong>Fact:</strong> Water already moves from Rodman into the St. Johns through drawdowns and
                       releases. The key question is short-term management vs. long-term ecosystem health. A
@@ -157,7 +171,7 @@ export default function WaterQualityPage() {
                     pollution sources.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
-                    <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-secondary" />
+                    <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
                       <strong>Fact:</strong> Natural rivers with adequate flow can help reduce bloom severity by
                       preventing stagnation, supporting SAV that filters water, and maintaining healthier dissolved
@@ -180,9 +194,16 @@ export default function WaterQualityPage() {
               <h2 className="text-3xl font-bold tracking-tight text-foreground">Submerged Aquatic Vegetation (SAV)</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
-                  SAV—underwater grasses like eelgrass and tape grass—are critical for ecosystem health. They provide
-                  food for manatees, habitat for fish, and natural filtration by absorbing nutrients and stabilizing
-                  sediment.
+                  <a
+                    href="/sources#stjohns-riverkeeper-sav"
+                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                    title="Source: St. Johns Riverkeeper - SAV & Eelgrass"
+                  >
+                    SAV—underwater grasses like eelgrass and tape grass—are critical for ecosystem health. They provide
+                    food for manatees, habitat for fish, and natural filtration by absorbing nutrients and stabilizing
+                    sediment
+                  </a>
+                  .
                 </p>
                 <p>
                   However, SAV requires sunlight to grow. When water is dark from tannins (naturally-occurring organic
@@ -202,13 +223,26 @@ export default function WaterQualityPage() {
                 <h3 className="text-lg font-bold text-foreground">Tannins vs. Algae</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    Tannins are natural—they come from decaying leaves and organic matter and give Florida's rivers
-                    their characteristic tea-colored appearance. Tannins limit light but aren't a pollution problem.
+                    <a
+                      href="/sources#apms-journal"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: APMS Journal - SAV Patterns and Tannins"
+                    >
+                      Tannins are natural—they come from decaying leaves and organic matter and give Florida's rivers
+                      their characteristic tea-colored appearance. Tannins limit light but aren't a pollution problem
+                    </a>
+                    .
                   </p>
                   <p>
-                    Algae blooms, however, are driven by excess nutrients (nitrogen and phosphorus) and indicate
-                    ecosystem imbalance. Dense algae blocks light, depletes oxygen, and harms water quality far more
-                    than natural tannins.
+                    <a
+                      href="/sources#stjohns-riverkeeper-algae"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: St. Johns Riverkeeper - Algae & Nutrients"
+                    >
+                      Algae blooms, however, are driven by excess nutrients (nitrogen and phosphorus) and indicate
+                      ecosystem imbalance
+                    </a>
+                    . Dense algae blocks light, depletes oxygen, and harms water quality far more than natural tannins.
                   </p>
                   <p>
                     Natural rivers balance tannins with flow and seasonal variation. Stagnant reservoirs can amplify
@@ -221,9 +255,16 @@ export default function WaterQualityPage() {
                 <h3 className="text-lg font-bold text-foreground">Hurricane Irma's Impact</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-muted-foreground">
                   <p>
-                    After Hurricane Irma in 2017, massive inputs of vegetation and organic matter from flooding
-                    significantly increased tannin levels and darkened the water throughout the St. Johns system. This
-                    stressed SAV by reducing light penetration.
+                    <a
+                      href="/sources#sjrwmd-streamlines"
+                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
+                      title="Source: SJRWMD Streamlines - Tracking Aquatic Vegetation"
+                    >
+                      After Hurricane Irma in 2017, massive inputs of vegetation and organic matter from flooding
+                      significantly increased tannin levels and darkened the water throughout the St. Johns system. This
+                      stressed SAV by reducing light penetration
+                    </a>
+                    .
                   </p>
                   <p>
                     This demonstrates how major disturbances affect both reservoir and river systems. The question is

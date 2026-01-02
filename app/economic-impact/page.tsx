@@ -9,8 +9,16 @@ export default function EconomicImpactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-16 sm:py-24 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{
+            backgroundImage: "url('/healthy-river-restoration.jpg')",
+            opacity: 0.5,
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background z-0" />
+        <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 text-balance">
             The Economic Case for Restoration
           </h1>

@@ -39,6 +39,13 @@ export default function TimelinePage() {
       impact: "positive",
     },
     {
+      year: "1997",
+      title: "Kent Smith Report Documents Manatee Deaths",
+      description:
+        "FDEP report by Kent Smith documents manatee mortality at the Buckman Lock/Rodman Dam system, with carcass damage consistent with trauma from water-control structures. This becomes key evidence for restoration advocacy.",
+      impact: "negative",
+    },
+    {
       year: "1998",
       title: "Jeb Bush Reverses Restoration Plans",
       description:
@@ -94,8 +101,18 @@ export default function TimelinePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-16 sm:py-24 bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/ocklawaha-river-flowing.jpg"
+            alt="Historic Ocklawaha River"
+            fill
+            className="object-cover opacity-40"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/70 to-background/60" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 text-balance">50+ Years of Controversy</h1>
           <p className="text-lg text-muted-foreground text-pretty">
             The long history of the Cross Florida Barge Canal and the fight to restore the Ocklawaha River
