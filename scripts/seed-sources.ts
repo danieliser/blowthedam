@@ -65,7 +65,7 @@ const sources = [
   },
   {
     slug: 'defenders-endangered',
-    title: 'Ocklawaha River Named Among America's Most Endangered Rivers of 2020',
+    title: 'Ocklawaha River Named Among America\'s Most Endangered Rivers of 2020',
     author: 'Defenders of Wildlife',
     year: 2020,
     source_type: 'advocacy' as const,
@@ -162,7 +162,7 @@ const sources = [
     source_type: 'agency' as const,
     category_slug: 'water-quality',
     url: 'https://www.sjrwmd.com/streamlines/beneath-the-surface-tracking-aquatic-vegetation-in-the-lower-st-johns-river/',
-    description: 'Hurricane Irma's impact: tannins/dark water → light limitation → SAV stress.',
+    description: 'Hurricane Irma\'s impact: tannins/dark water → light limitation → SAV stress.',
     sort_order: 3,
   },
   {
@@ -201,7 +201,7 @@ const sources = [
   },
   {
     slug: 'audubon-dam',
-    title: 'Has One Florida Dam's Day Finally Come?',
+    title: 'Has One Florida Dam\'s Day Finally Come?',
     author: 'Audubon Magazine',
     source_type: 'news' as const,
     category_slug: 'dam-history',
@@ -239,7 +239,7 @@ const sources = [
     source_type: 'agency' as const,
     category_slug: 'additional-resources',
     url: 'https://myfwc.com/research/freshwater/freshwater-projects/water/mercury-testing/',
-    description: 'Florida Fish and Wildlife Conservation Commission's mercury testing program for freshwater fish.',
+    description: 'Florida Fish and Wildlife Conservation Commission\'s mercury testing program for freshwater fish.',
     sort_order: 2,
   },
   {
