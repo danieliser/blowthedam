@@ -12,73 +12,165 @@ Read both documents completely before starting implementation.
 
 ---
 
-## Architecture: Vercel + Supabase Preview Environments
+## Git Workflow
 
-This project uses **Vercel Preview Deployments** with **Supabase Branching** (or a shared dev database). Configure for:
+**Work in a feature branch. Create PR for preview deployment testing.**
 
-1. **Production:** `main` branch → Production Supabase project
-2. **Preview:** PR branches → Preview/Development Supabase (same schema)
+```bash
+# Start from main
+git checkout main
+git pull origin main
 
-### Environment Variable Strategy
+# Create feature branch
+git checkout -b feature/supabase-sources-blog
 
-```
-# Vercel Environment Variables (set in Vercel Dashboard)
-# Production + Preview + Development
-
-NEXT_PUBLIC_SUPABASE_URL=         # Supabase project URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY=    # Supabase anon/public key
-
-# Optional: For admin scripts only (not exposed to browser)
-SUPABASE_SERVICE_ROLE_KEY=        # Service role key for migrations/seeds
+# After implementation, push and create PR
+git push -u origin feature/supabase-sources-blog
+gh pr create --title "feat: Supabase sources & blog system" --body "..."
 ```
 
-**Vercel will automatically use the correct env vars per environment.**
+All commits go to the feature branch. Vercel will create a preview deployment for the PR.
+
+---
+
+## Supabase CLI Workflow
+
+**Use Supabase CLI for all database operations. No manual SQL editor.**
+
+### Initial Setup (if not already linked)
+
+```bash
+# Check if already linked
+supabase status
+
+# If not linked, link to project
+supabase link --project-ref <project-id>
+
+# Login if needed
+supabase login
+```
+
+### Migration Workflow
+
+```bash
+# Create new migration
+supabase migration new sources_and_blog
+
+# This creates: supabase/migrations/<timestamp>_sources_and_blog.sql
+# Copy SQL schema from SPEC into this file
+
+# Push migration to remote database
+supabase db push
+
+# Or for local development first:
+supabase start
+supabase db reset  # Applies all migrations to local
+```
+
+### Type Generation
+
+**Use Supabase Typegen. Do NOT write types manually.**
+
+```bash
+# Generate types from remote database (after migration is pushed)
+supabase gen types typescript --project-id <project-id> > types/database.ts
+
+# Or from local database
+supabase gen types typescript --local > types/database.ts
+```
+
+After generating, you may want to add custom helper types (joins, etc.) in a separate file:
+
+```typescript
+// types/database-helpers.ts
+import type { Database } from './database';
+
+// Convenience aliases
+export type Source = Database['public']['Tables']['sources']['Row'];
+export type SourceInsert = Database['public']['Tables']['sources']['Insert'];
+export type SourceCategory = Database['public']['Tables']['source_categories']['Row'];
+// ... etc
+
+// Joined types for queries
+export interface SourceWithCategory extends Source {
+  category: SourceCategory | null;
+}
+```
 
 ---
 
 ## Implementation Phases
 
-### Phase 1: Project Setup & Supabase Integration
+### Phase 1: Branch & Project Setup
+
+```bash
+git checkout -b feature/supabase-sources-blog
+pnpm add @supabase/supabase-js
+```
 
 ```yaml
 tasks:
+  - Create feature branch
   - Install @supabase/supabase-js
   - Create lib/supabase.ts with client setup
-  - Create types/database.ts with full TypeScript types
   - Create .env.local.example template
-  - Update .gitignore for .env.local
+  - Verify supabase CLI is linked
 ```
 
-**Validation:** `pnpm tsc --noEmit` passes
+**Commit:** `feat(setup): add Supabase client and env template`
 
 ### Phase 2: Database Migration
 
-```yaml
-tasks:
-  - Create supabase/migrations/001_sources_and_blog.sql
-  - Copy complete SQL schema from SPEC document
-  - Document manual step: Run migration in Supabase Dashboard
+```bash
+supabase migration new sources_and_blog
+# Edit the migration file with SQL from SPEC
+supabase db push
 ```
 
-**Note:** Migration must be run manually in Supabase SQL Editor. Create a `supabase/README.md` with instructions.
+```yaml
+tasks:
+  - Create migration file via CLI
+  - Copy SQL schema from SPEC document (all tables, triggers, RLS, seed data)
+  - Push migration to Supabase
+  - Verify tables exist in Supabase Dashboard
+```
 
-### Phase 3: Data Fetching Layer
+**Commit:** `feat(db): add sources and blog schema migration`
+
+### Phase 3: Type Generation
+
+```bash
+supabase gen types typescript --project-id <project-id> > types/database.ts
+```
+
+```yaml
+tasks:
+  - Generate types from Supabase
+  - Create types/database-helpers.ts with convenience types
+  - Verify types compile: pnpm tsc --noEmit
+```
+
+**Commit:** `feat(types): generate Supabase types`
+
+### Phase 4: Data Fetching Layer
 
 ```yaml
 tasks:
   - Create lib/sources.ts with all source query functions
   - Create lib/blog.ts with all blog query functions
-  - Implement proper error handling and null safety
-  - Add ISR revalidation hints for Next.js caching
+  - Use generated types for full type safety
+  - Add ISR revalidation hints
 ```
 
-**Key functions from SPEC:**
+**Key functions:**
 - `getSourcesByCategory()` - For sources page
-- `getCitationData(slug)` - For citation popovers
+- `getCitationData(slug)` - For citation popovers (lightweight)
 - `getPublishedPosts()` - For blog listing
 - `getPostBySlug(slug)` - For individual posts
 
-### Phase 4: API Routes
+**Commit:** `feat(data): add source and blog query functions`
+
+### Phase 5: API Routes
 
 ```yaml
 tasks:
@@ -87,61 +179,99 @@ tasks:
   - Return 404 for missing sources
 ```
 
-### Phase 5: React Components
+**Commit:** `feat(api): add citation data endpoint`
+
+### Phase 6: React Components
 
 ```yaml
 tasks:
-  - Create components/citation.tsx (with Popover from existing Radix UI)
-  - Create components/source-card.tsx
+  - Create components/citation.tsx (with existing Radix Popover)
+  - Create components/source-card.tsx (with type badges)
   - Create components/source-category-section.tsx
-  - Ensure all components use existing UI primitives from components/ui/
+  - Use existing UI primitives from components/ui/
 ```
 
-**Important:** Project already has `@radix-ui/react-popover` installed. Use the existing pattern.
+**Commit:** `feat(ui): add Citation and Source display components`
 
-### Phase 6: Update Sources Page
+### Phase 7: Update Sources Page
 
 ```yaml
 tasks:
   - Convert app/sources/page.tsx from hardcoded to database-driven
-  - Keep the existing hero section and "approach to evidence" card
-  - Replace hardcoded Card components with SourceCategorySection
+  - Keep existing hero section and "approach to evidence" card
+  - Replace hardcoded Cards with SourceCategorySection
   - Add revalidate = 3600 for ISR
-  - Preserve scroll-to-anchor functionality (id attributes on cards)
+  - CRITICAL: Preserve id attributes for backward-compatible anchors
 ```
 
-**Critical:** Maintain all existing anchor IDs for backward compatibility with existing citations on other pages.
+**Backward Compatibility:** Current site has citations linking to `/sources#anchor-id`. These MUST work:
+- Extract all existing `id` attributes from current file
+- Ensure new slugs match OR create redirects
 
-### Phase 7: Seed Data Script
+**Commit:** `refactor(sources): convert to database-driven page`
+
+### Phase 8: Seed Data Script
 
 ```yaml
 tasks:
   - Create scripts/seed-sources.ts
-  - Extract ALL sources from current hardcoded page
-  - Map to new schema format
-  - Create scripts/source-data.json with full source data
-  - Document: "Run with SUPABASE_SERVICE_ROLE_KEY set"
+  - Extract ALL sources from current hardcoded page (22+ sources)
+  - Map to new schema format with correct category slugs
+  - Use Supabase service role for inserts
 ```
 
-### Phase 8: Blog System (Basic)
+```bash
+# Run seed script
+SUPABASE_SERVICE_ROLE_KEY=xxx npx tsx scripts/seed-sources.ts
+```
+
+**Commit:** `chore(scripts): add source seed script`
+
+### Phase 9: Blog System
 
 ```yaml
 tasks:
   - Create app/blog/page.tsx (listing)
   - Create app/blog/[slug]/page.tsx (individual post)
   - Add generateStaticParams for static generation
-  - Include SEO metadata handling
+  - Add generateMetadata for SEO
 ```
 
-### Phase 9: Integration Testing
+**Commit:** `feat(blog): add blog listing and post pages`
+
+### Phase 10: Testing & PR
 
 ```yaml
 tasks:
-  - Verify sources page loads from database (after seeding)
-  - Test citation popover on existing content pages
-  - Verify anchor links work (/sources#slug)
-  - Check mobile responsiveness
-  - Run Lighthouse audit
+  - Run pnpm build (must succeed)
+  - Run pnpm lint (must pass)
+  - Test sources page loads from database
+  - Test citation popover functionality
+  - Test anchor links still work
+  - Push branch and create PR
+```
+
+```bash
+git push -u origin feature/supabase-sources-blog
+gh pr create --title "feat: Supabase sources & blog system" \
+  --body "## Summary
+- Migrates hardcoded sources to Supabase database
+- Adds Citation popover component
+- Adds basic blog system
+- Uses Supabase CLI for migrations and typegen
+
+## Testing
+- [ ] Sources page loads from database
+- [ ] Citation popovers work on hover
+- [ ] Anchor links scroll correctly
+- [ ] Blog pages render
+- [ ] Mobile responsive
+
+## Migration
+After merge, seed script needs to run:
+\`\`\`
+SUPABASE_SERVICE_ROLE_KEY=xxx npx tsx scripts/seed-sources.ts
+\`\`\`"
 ```
 
 ---
@@ -154,65 +284,71 @@ blowthedam/
 │   ├── api/
 │   │   └── citations/
 │   │       └── [slug]/
-│   │           └── route.ts          # Citation data endpoint
+│   │           └── route.ts
 │   ├── blog/
-│   │   ├── page.tsx                  # Blog listing
+│   │   ├── page.tsx
 │   │   └── [slug]/
-│   │       └── page.tsx              # Individual post
+│   │       └── page.tsx
 │   ├── sources/
-│   │   └── page.tsx                  # Updated (database-driven)
-│   └── ...existing pages
+│   │   └── page.tsx              # Updated (database-driven)
+│   └── ...existing
 ├── components/
-│   ├── citation.tsx                  # NEW
-│   ├── source-card.tsx               # NEW
-│   ├── source-category-section.tsx   # NEW
-│   └── ui/                           # Existing Radix components
+│   ├── citation.tsx              # NEW
+│   ├── source-card.tsx           # NEW
+│   ├── source-category-section.tsx # NEW
+│   └── ui/                       # Existing
 ├── lib/
-│   ├── supabase.ts                   # NEW
-│   ├── sources.ts                    # NEW
-│   ├── blog.ts                       # NEW
-│   └── utils.ts                      # Existing
+│   ├── supabase.ts               # NEW
+│   ├── sources.ts                # NEW
+│   ├── blog.ts                   # NEW
+│   └── utils.ts                  # Existing
 ├── types/
-│   └── database.ts                   # NEW
+│   ├── database.ts               # Generated by supabase gen types
+│   └── database-helpers.ts       # NEW - convenience types
 ├── supabase/
 │   ├── migrations/
-│   │   └── 001_sources_and_blog.sql  # NEW
-│   └── README.md                     # NEW (migration instructions)
+│   │   └── <timestamp>_sources_and_blog.sql
+│   ├── config.toml
+│   └── seed.sql                  # Optional
 ├── scripts/
-│   ├── seed-sources.ts               # NEW
-│   └── source-data.json              # NEW
+│   └── seed-sources.ts           # NEW
 ├── docs/
-│   ├── PRD-sources-blog-system.md    # Reference
-│   └── SPEC-sources-blog-system.md   # Reference
-├── .env.local.example                # NEW
+│   ├── PRD-sources-blog-system.md
+│   ├── SPEC-sources-blog-system.md
+│   └── CLAUDE-CODE-PROMPT.md
+├── .env.local.example            # NEW
 └── package.json
+```
+
+---
+
+## Environment Variables
+
+```bash
+# .env.local.example
+
+# Supabase - Required
+NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+
+# Supabase - For admin scripts only (never expose to browser)
+SUPABASE_SERVICE_ROLE_KEY=eyJ...
+
+# Vercel provides these automatically in preview deployments
+# VERCEL_ENV=preview|production|development
+# VERCEL_URL=xxx.vercel.app
 ```
 
 ---
 
 ## Critical Implementation Notes
 
-### 1. Preserve Backward Compatibility
-
-The current site has inline citations linking to `/sources#anchor-id`. These MUST continue working:
-
-```tsx
-// Current pattern in content pages:
-<a href="/sources#usfws-recovery-plan">manatee recovery plan</a>
-
-// New SourceCard must include:
-<Card id={source.slug} className="scroll-mt-24">
-```
-
-Map old IDs to new slugs:
-- `smith-1997` → `smith-1997` ✓
-- `usfws-recovery` → `usfws-recovery-2001` (redirect or alias needed)
-
-### 2. Environment-Aware Supabase Client
+### 1. Supabase Client Setup
 
 ```typescript
 // lib/supabase.ts
 import { createClient } from '@supabase/supabase-js';
+import type { Database } from '@/types/database';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
@@ -221,78 +357,66 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Typed client
+export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey);
 
-// For Server Components
+// For Server Components (no session persistence needed)
 export function createServerClient() {
-  return createClient(supabaseUrl, supabaseAnonKey, {
+  return createClient<Database>(supabaseUrl, supabaseAnonKey, {
     auth: { persistSession: false },
   });
 }
 ```
 
-### 3. Vercel Preview URL Handling
+### 2. Preserve Anchor IDs
 
-Supabase RLS doesn't need special preview handling since we're using `anon` key for public read. But if you add auth later:
-
-```typescript
-// For future auth integration
-const getRedirectUrl = () => {
-  const isPreview = process.env.VERCEL_ENV === 'preview';
-  const previewUrl = process.env.VERCEL_URL;
-  const prodUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  
-  return isPreview ? `https://${previewUrl}` : prodUrl;
-};
+Extract current IDs from `app/sources/page.tsx`:
+```
+smith-1997, usfws-recovery, save-the-manatee, defenders-wildlife,
+marine-mammal, fwc-report, sjrwmd-drawdown, uf-caip, fl-state-parks,
+fwc-rodman, riverkeeper-algae, sjrwmd-algae, sjrwmd-sav, riverkeeper-sav,
+apms-journal, wuft-dam, audubon-dam, defenders-endangered, sjrwmd-marion,
+fl-health-advisories, fwc-mercury, fl-springs-institute
 ```
 
-### 4. ISR + On-Demand Revalidation
+New slugs MUST match these exactly OR implement client-side redirect mapping.
+
+### 3. Type-Safe Queries
 
 ```typescript
-// app/sources/page.tsx
-export const revalidate = 3600; // Revalidate every hour
+// lib/sources.ts
+import { createServerClient } from './supabase';
+import type { SourceWithCategory } from '@/types/database-helpers';
 
-// For on-demand revalidation (future webhook from SupaMode):
-// app/api/revalidate/route.ts
-import { revalidatePath } from 'next/cache';
-
-export async function POST(request: Request) {
-  const { secret, path } = await request.json();
-  if (secret !== process.env.REVALIDATION_SECRET) {
-    return Response.json({ error: 'Invalid secret' }, { status: 401 });
-  }
-  revalidatePath(path);
-  return Response.json({ revalidated: true });
+export async function getSourcesByCategory() {
+  const supabase = createServerClient();
+  
+  const { data, error } = await supabase
+    .from('sources')
+    .select(`
+      *,
+      category:source_categories(*)
+    `)
+    .order('sort_order');
+  
+  if (error) throw error;
+  return data as SourceWithCategory[];
 }
 ```
 
-### 5. Type Safety with Supabase
-
-Generate types from Supabase for maximum safety:
-
-```bash
-# Optional: Generate types from Supabase schema
-npx supabase gen types typescript --project-id YOUR_PROJECT_ID > types/supabase.ts
-```
-
-But the manual types in SPEC are sufficient for this project.
-
 ---
 
-## Commit Strategy
-
-Make atomic commits for each phase:
+## Commit Message Convention
 
 ```
-feat(db): add Supabase client and TypeScript types
-feat(db): add SQL migration for sources and blog
-feat(api): add citation data endpoint
-feat(ui): add Citation, SourceCard, SourceCategorySection components
-refactor(sources): convert sources page to database-driven
-feat(blog): add blog listing and post pages
-chore(scripts): add source seed script with migration data
-docs: add Supabase migration instructions
+feat(scope): description     # New feature
+fix(scope): description      # Bug fix
+refactor(scope): description # Code change that neither fixes nor adds
+chore(scope): description    # Maintenance tasks
+docs(scope): description     # Documentation only
 ```
+
+Scopes: `setup`, `db`, `types`, `data`, `api`, `ui`, `sources`, `blog`, `scripts`
 
 ---
 
@@ -300,47 +424,24 @@ docs: add Supabase migration instructions
 
 - [ ] `pnpm build` succeeds
 - [ ] `pnpm lint` passes
-- [ ] Sources page loads (even if empty before seeding)
-- [ ] Citation popover works on hover
+- [ ] `pnpm tsc --noEmit` passes
+- [ ] Supabase migration applied successfully
+- [ ] Types generated from database
+- [ ] Sources page loads (works empty, works with data)
+- [ ] Citation popover appears on hover
 - [ ] Anchor links scroll to correct source
-- [ ] Blog pages render (even if empty)
-- [ ] Mobile responsive on all new components
-- [ ] No TypeScript errors
-- [ ] Environment variables documented
-
----
-
-## Post-Implementation: Manual Steps
-
-Document these for the developer/admin:
-
-1. **Run Supabase Migration:**
-   - Go to Supabase Dashboard → SQL Editor
-   - Paste contents of `supabase/migrations/001_sources_and_blog.sql`
-   - Execute
-
-2. **Seed Source Data:**
-   ```bash
-   SUPABASE_SERVICE_ROLE_KEY=xxx npx tsx scripts/seed-sources.ts
-   ```
-
-3. **Configure Vercel:**
-   - Add `NEXT_PUBLIC_SUPABASE_URL` to all environments
-   - Add `NEXT_PUBLIC_SUPABASE_ANON_KEY` to all environments
-
-4. **Configure SupaMode (Optional):**
-   - Point SupaMode at your Supabase project
-   - Tables will auto-discover
+- [ ] Blog pages render
+- [ ] Mobile responsive
+- [ ] Vercel preview deployment works
 
 ---
 
 ## Start Here
 
-1. Read `docs/PRD-sources-blog-system.md` completely
-2. Read `docs/SPEC-sources-blog-system.md` completely
-3. Begin with Phase 1: `pnpm add @supabase/supabase-js`
-4. Work through each phase sequentially
-5. Commit after each phase
-6. Test thoroughly before final PR
-
-**Goal:** A working sources page pulling from Supabase, with reusable Citation component ready for content pages, and a basic blog system framework.
+1. `git checkout -b feature/supabase-sources-blog`
+2. Read `docs/PRD-sources-blog-system.md` completely
+3. Read `docs/SPEC-sources-blog-system.md` completely
+4. Verify `supabase status` shows linked project
+5. Begin Phase 1: `pnpm add @supabase/supabase-js`
+6. Work through each phase, commit after each
+7. Push and create PR when complete
