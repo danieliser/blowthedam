@@ -71,31 +71,36 @@ export function Citation({
   const linkHref = citation?.url || `/sources#${sourceSlug}`;
   const isExternal = citation?.url?.startsWith('http');
 
-  const citationLink = (
-    <Link
-      href={linkHref}
-      target={isExternal ? '_blank' : undefined}
-      rel={isExternal ? 'noopener noreferrer' : undefined}
-      className={cn(
-        'text-secondary underline decoration-secondary/30 hover:decoration-secondary',
-        'transition-colors duration-150',
-        className
-      )}
-      onMouseEnter={showPopover ? loadCitation : undefined}
-      onFocus={showPopover ? loadCitation : undefined}
-    >
-      {children}
-    </Link>
-  );
-
   if (!showPopover) {
-    return citationLink;
+    return (
+      <Link
+        href={linkHref}
+        target={isExternal ? '_blank' : undefined}
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+        className={cn(
+          'text-secondary underline decoration-secondary/30 hover:decoration-secondary',
+          'transition-colors duration-150',
+          className
+        )}
+      >
+        {children}
+      </Link>
+    );
   }
 
   return (
-    <Popover>
+    <Popover onOpenChange={(open) => open && loadCitation()}>
       <PopoverTrigger asChild>
-        {citationLink}
+        <button
+          className={cn(
+            'text-secondary underline decoration-secondary/30 hover:decoration-secondary',
+            'transition-colors duration-150 inline cursor-pointer bg-transparent border-none p-0 font-inherit',
+            className
+          )}
+          type="button"
+        >
+          {children}
+        </button>
       </PopoverTrigger>
       <PopoverContent
         className="w-80 p-4"
