@@ -152,26 +152,26 @@ export default function DamCostsPage() {
             <Card className="border-l-4 border-l-destructive bg-card p-8 shadow-lg">
               <h3 className="mb-6 text-2xl font-bold text-foreground">What Maintenance Buys</h3>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
+                <li className="flex items-center gap-3">
+                  <div className="h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
                   <span className="text-muted-foreground">
                     Recurring drawdowns disrupt the reservoir ecosystem every few years
                   </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
+                <li className="flex items-center gap-3">
+                  <div className="h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
                   <span className="text-muted-foreground">
                     Degraded water quality and blocked spring flow continue indefinitely
                   </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
+                <li className="flex items-center gap-3">
+                  <div className="h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
                   <span className="text-muted-foreground">
                     Manatees remain cut off from historic warm-water refuge and forage habitat
                   </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
+                <li className="flex items-center gap-3">
+                  <div className="h-2 w-2 flex-shrink-0 rounded-full bg-destructive" />
                   <span className="text-muted-foreground">
                     The problem is deferred, not solved—future generations inherit the same decision
                   </span>
