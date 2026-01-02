@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { BookOpen, Building2, FileText, Newspaper, Scale } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { BookOpen, Building2, FileText, Newspaper, Scale, Info, X } from 'lucide-react';
 import {
   Popover,
   PopoverContent,
@@ -74,6 +74,7 @@ const sourceTypeInfo: Record<SourceType, {
 
 export function SourcesSidebar({ categories }: SourcesSidebarProps) {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [openPopover, setOpenPopover] = useState<string | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -138,31 +139,59 @@ export function SourcesSidebar({ categories }: SourcesSidebarProps) {
           </h3>
           <div className="space-y-2">
             {(Object.entries(sourceTypeInfo) as [SourceType, typeof sourceTypeInfo[SourceType]][]).map(([type, info]) => {
-              const [isOpen, setIsOpen] = useState(false);
-
               return (
-                <Popover key={type} open={isOpen} onOpenChange={setIsOpen}>
-                  <PopoverTrigger asChild>
-                    <button
-                      className={cn(
-                        'w-full flex items-center gap-2 px-3 py-2 rounded-md text-xs font-semibold transition-all hover:shadow-sm border-l-2 cursor-pointer',
-                        info.className
-                      )}
-                      onMouseEnter={() => setIsOpen(true)}
-                      onMouseLeave={() => setIsOpen(false)}
-                    >
-                      {info.icon}
-                      <span>{info.label}</span>
-                    </button>
-                  </PopoverTrigger>
+                <div
+                  key={type}
+                  className={cn(
+                    'flex items-center gap-2 px-3 py-2 rounded-md text-xs font-semibold border-l-2',
+                    info.className
+                  )}
+                >
+                  {info.icon}
+                  <span className="flex-1">{info.label}</span>
+
+                  <Popover
+                    open={openPopover === type}
+                    onOpenChange={(open) => {
+                      if (open) {
+                        setOpenPopover(type);
+                      } else if (openPopover === type) {
+                        setOpenPopover(null);
+                      }
+                    }}
+                  >
+                    <PopoverTrigger asChild>
+                      <button
+                        className="hover:bg-black/10 dark:hover:bg-white/10 rounded p-0.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        onMouseEnter={() => setOpenPopover(type)}
+                        onFocus={() => setOpenPopover(type)}
+                        aria-label={`View ${info.label} information`}
+                      >
+                        <Info className="h-3.5 w-3.5" />
+                      </button>
+                    </PopoverTrigger>
                   <PopoverContent
                     side="right"
                     align="start"
-                    className="w-80"
+                    alignOffset={-15}
+                    sideOffset={8}
                     onOpenAutoFocus={(e) => e.preventDefault()}
-                    onMouseEnter={() => setIsOpen(true)}
-                    onMouseLeave={() => setIsOpen(false)}
+                    collisionPadding={10}
+                    className={cn(
+                      "w-80 max-sm:w-[calc(100vw-2rem)] overflow-visible",
+                      "before:absolute before:-left-[17px] before:top-[15px] before:border-[8px] before:border-transparent before:border-r-border before:drop-shadow-md before:-z-10",
+                      "after:absolute after:-left-[14px] after:top-[16px] after:border-[7px] after:border-transparent after:border-r-popover after:z-10"
+                    )}
                   >
+                    {/* Mobile close button */}
+                    <button
+                      onClick={() => setOpenPopover(null)}
+                      className="sm:hidden absolute top-3 right-3 p-1 rounded-md hover:bg-muted transition-colors"
+                      aria-label="Close"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+
                     <div className="space-y-3">
                       <div className="flex items-center gap-2">
                         {info.icon}
@@ -194,7 +223,8 @@ export function SourcesSidebar({ categories }: SourcesSidebarProps) {
                       </div>
                     </div>
                   </PopoverContent>
-                </Popover>
+                  </Popover>
+                </div>
               );
             })}
           </div>

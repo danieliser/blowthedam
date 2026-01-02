@@ -116,8 +116,8 @@ export function SourceCard({ source, showCategory }: SourceCardProps) {
         {/* Description - Emphasized */}
         {source.description && (
           <div className="pt-3 border-t border-border/50">
-            <p className="text-sm leading-relaxed text-foreground/80 italic">
-              "{source.description}"
+            <p className="text-sm leading-relaxed text-foreground/90">
+              {source.description}
             </p>
           </div>
         )}
