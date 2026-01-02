@@ -108,7 +108,7 @@ export function Citation({
       setIsOpen(false);
       // Reset position flag when fully closed
       hasSetPosition.current = false;
-    }, 60000); // 1 minute for debugging
+    }, 150);
   };
 
   const handlePopoverMouseEnter = () => {
