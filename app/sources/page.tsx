@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { BookOpen } from 'lucide-react';
 import { getSourcesByCategory } from '@/lib/sources';
 import { SourceCategorySection } from '@/components/source-category-section';
+import { SourcesClientWrapper } from '@/components/sources-client-wrapper';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -18,8 +19,9 @@ export default async function SourcesPage() {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
+    <SourcesClientWrapper>
+      <div className="min-h-screen">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="bg-primary py-16 text-primary-foreground sm:py-24">
@@ -87,5 +89,6 @@ export default async function SourcesPage() {
         </div>
       </section>
     </div>
+    </SourcesClientWrapper>
   );
 }

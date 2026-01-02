@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import {
   Popover,
@@ -47,6 +47,8 @@ export function Citation({
   const [citation, setCitation] = useState<CitationData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout>();
 
   // Fetch citation data on hover/focus
   const loadCitation = async () => {
@@ -66,6 +68,20 @@ export function Citation({
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleMouseEnter = () => {
+    loadCitation();
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsOpen(true);
+    }, 300);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    setIsOpen(false);
   };
 
   const linkHref = citation?.url || `/sources#${sourceSlug}`;
@@ -89,22 +105,39 @@ export function Citation({
   }
 
   return (
-    <Popover onOpenChange={(open) => open && loadCitation()}>
+    <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild>
-        <button
+        <Link
+          href={linkHref}
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noopener noreferrer' : undefined}
           className={cn(
             'text-secondary underline decoration-secondary/30 hover:decoration-secondary',
-            'transition-colors duration-150 inline cursor-pointer bg-transparent border-none p-0 font-inherit',
+            'transition-colors duration-150',
             className
           )}
-          type="button"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onFocus={loadCitation}
         >
           {children}
-        </button>
+        </Link>
       </PopoverTrigger>
       <PopoverContent
         className="w-80 p-4"
+        align="start"
+        side="bottom"
+        alignOffset={-60}
         onOpenAutoFocus={(e) => e.preventDefault()}
+        onMouseEnter={() => {
+          if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+          }
+          setIsOpen(true);
+        }}
+        onMouseLeave={handleMouseLeave}
+        sideOffset={4}
+        collisionPadding={10}
       >
         {isLoading && (
           <div className="text-sm text-muted-foreground">Loading...</div>

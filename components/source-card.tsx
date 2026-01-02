@@ -50,7 +50,7 @@ export function SourceCard({ source, showCategory }: SourceCardProps) {
   return (
     <Card
       id={source.slug}
-      className="p-6 scroll-mt-24"
+      className="p-6 scroll-mt-24 transition-all duration-300"
     >
       {/* Type Badge */}
       <div className="flex items-center gap-2 mb-2">

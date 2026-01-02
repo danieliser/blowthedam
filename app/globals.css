@@ -117,4 +117,20 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes highlight-glow {
+  0% {
+    background-color: oklch(0.92 0.08 200);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.source-highlighted {
+  animation: highlight-glow 2.5s ease-out;
 }
