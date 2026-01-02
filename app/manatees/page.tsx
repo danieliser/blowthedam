@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { Citation } from "@/components/citation"
 import { AlertCircle, ArrowRight, CheckCircle, XCircle } from "lucide-react"
 import Link from "next/link"
 
@@ -40,30 +41,18 @@ export default function ManateesPage() {
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
                   Florida's manatees are facing unprecedented challenges.{" "}
-                  <a
-                    href="/sources#usfws-recovery-plan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                    title="Source: USFWS Florida Manatee Recovery Plan"
-                  >
+                  <Citation sourceSlug="usfws-recovery">
                     Over 1,000 manatees died in 2021 alone
-                  </a>
+                  </Citation>
                   , with hundreds more in subsequent years. The primary cause: loss of seagrass beds and warm-water
                   refuges that manatees depend on for survival.
                 </p>
                 <p>
                   Manatees need two critical elements to thrive:{" "}
-                  <a
-                    href="/sources#usfws-recovery-plan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                    title="Source: USFWS Florida Manatee Recovery Plan"
-                  >
+                  <Citation sourceSlug="usfws-recovery">
                     <strong>warm-water refuges</strong> during winter months and <strong>abundant food sources</strong>{" "}
                     like seagrass throughout the year
-                  </a>
+                  </Citation>
                   . The Ocklawaha River basin, with its connection to Silver Springs and other natural springs,
                   historically provided both.
                 </p>
@@ -103,15 +92,9 @@ export default function ManateesPage() {
                 refuges are for manatee survival during winter months.
               </p>
               <p className="text-pretty leading-relaxed text-foreground">
-                <a
-                  href="/sources#marine-mammal-commission"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                  title="Source: Marine Mammal Commission Taylor Report"
-                >
+                <Citation sourceSlug="marine-mammal">
                   Restoring the Ocklawaha's connection to Silver Springs and other warm-water refuges
-                </a>{" "}
+                </Citation>{" "}
                 would expand this critical habitat network, giving manatees more options and reducing crowding at
                 limited sites.
               </p>
@@ -133,30 +116,18 @@ export default function ManateesPage() {
                   <h2 className="text-2xl font-bold text-foreground">Documented Manatee Harm at Dam/Lock Systems</h2>
                   <div className="mt-4 space-y-4 text-pretty leading-relaxed">
                     <p className="text-foreground">
-                      <a
-                        href="/sources#kent-smith-1997"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                        title="Source: Kent Smith (1997) FDEP Report"
-                      >
+                      <Citation sourceSlug="smith-1997">
                         Multiple verified and undetermined manatee mortalities have been documented in the vicinity of
                         the Buckman Lock and Rodman Reservoir area
-                      </a>
+                      </Citation>
                       . A University of Florida-hosted report cites carcass damage consistent with trauma from the
                       Rodman Reservoir and Buckman Lock structural mechanisms.
                     </p>
                     <p className="text-muted-foreground">
                       According to the{" "}
-                      <a
-                        href="/sources#marine-mammal-commission"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                        title="Source: Marine Mammal Commission Taylor Report (2006)"
-                      >
+                      <Citation sourceSlug="marine-mammal">
                         Marine Mammal Commission's Florida springs and manatee report
-                      </a>
+                      </Citation>
                       , "the dam and lock systems have been responsible for manatee mortality." The report explicitly
                       notes that removal would{" "}
                       <strong>eliminate the only known source of water-control-structure mortality</strong> in the St.
@@ -207,16 +178,10 @@ export default function ManateesPage() {
                     <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
                       <strong>Fact:</strong>{" "}
-                      <a
-                        href="/sources#marine-mammal-commission"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                        title="Source: Marine Mammal Commission Taylor Report"
-                      >
+                      <Citation sourceSlug="marine-mammal">
                         Manatees follow warm water refuges and food sources. The Ocklawaha historically connected to
                         Silver Springs—one of Florida's largest springs and a natural warm-water refuge
-                      </a>
+                      </Citation>
                       .
                     </p>
                   </div>
@@ -239,31 +204,19 @@ export default function ManateesPage() {
                   <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                     While some manatees do use Rodman Reservoir, large lake surface area doesn't equal quality manatee
                     habitat. The reservoir requires{" "}
-                    <a
-                      href="/sources#sjrwmd-drawdown"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                      title="Source: SJRWMD Drawdown Fact Sheet"
-                    >
+                    <Citation sourceSlug="sjrwmd-drawdown">
                       active management including water-level drawdowns, vegetation control, and herbicide applications
-                    </a>
+                    </Citation>
                     .
                   </p>
                   <div className="mt-4 flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
                     <p className="text-sm text-foreground">
                       <strong>Fact:</strong>{" "}
-                      <a
-                        href="/sources#defenders-of-wildlife"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                        title="Source: Defenders of Wildlife - Great Florida Riverway"
-                      >
+                      <Citation sourceSlug="defenders-wildlife">
                         Manatees thrive in <em>connected habitat systems</em> with reliable warm-water refuges (springs)
                         and natural food sources
-                      </a>
+                      </Citation>
                       . A free-flowing Ocklawaha would provide safe passage between the St. Johns River, Silver River,
                       and Silver Springs complex.
                     </p>
@@ -285,16 +238,10 @@ export default function ManateesPage() {
                     Myth: "Lock and dam systems are safe for manatees"
                   </h3>
                   <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-                    <a
-                      href="/sources#marine-mammal-commission"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                      title="Source: Marine Mammal Commission Taylor Report"
-                    >
+                    <Citation sourceSlug="marine-mammal">
                       Relying on a lock and dam infrastructure as a "manatee sanctuary" raises serious safety concerns.
                       Lock operations and dam structures pose risks to wildlife
-                    </a>
+                    </Citation>
                     , and the system requires constant human management.
                   </p>
                   <div className="mt-4 flex items-start gap-2">
@@ -322,28 +269,16 @@ export default function ManateesPage() {
             <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
               <p>
                 The key to manatee recovery isn't managing an artificial reservoir—it's{" "}
-                <a
-                  href="/sources#marine-mammal-commission"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                  title="Source: Marine Mammal Commission Taylor Report on thermal network"
-                >
+                <Citation sourceSlug="marine-mammal">
                   restoring natural connectivity
-                </a>
+                </Citation>
                 . The Ocklawaha River historically linked the St. Johns River to the Silver River and Silver Springs
                 complex, creating a resilient network of warm-water refuges and feeding grounds.
               </p>
               <p>
-                <a
-                  href="/sources#save-the-manatee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary underline decoration-secondary/30 hover:decoration-secondary"
-                  title="Source: Save the Manatee Club - Policy & Purpose"
-                >
+                <Citation sourceSlug="save-the-manatee">
                   Removing Rodman Dam would restore this connection
-                </a>
+                </Citation>
                 , allowing manatees to move naturally between habitats based on water temperature, food availability,
                 and seasonal needs. This is how healthy manatee populations survive—not by depending on a single managed
                 impoundment.
