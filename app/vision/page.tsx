@@ -262,7 +262,14 @@ export default function VisionPage() {
               <h3 className="font-bold text-foreground mb-2">Elwha River, Washington (2014)</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 After removing two dams, salmon returned within months. Today the river supports thriving fisheries,
-                restored habitat, and increased tourism.
+                restored habitat, and increased tourism.{" "}
+                <a
+                  href="/sources#elwha-case-study"
+                  className="text-secondary underline hover:text-secondary/80"
+                  title="Elwha River Restoration Information"
+                >
+                  Read more
+                </a>
               </p>
               <p className="text-sm text-primary font-semibold">Timeline: Rapid ecosystem recovery within 2-5 years</p>
             </div>
@@ -271,7 +278,14 @@ export default function VisionPage() {
               <h3 className="font-bold text-foreground mb-2">Kennebec River, Maine (1999)</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 Dam removal restored access for migratory fish. The river now generates millions in recreation revenue
-                and supports revitalized waterfront communities.
+                and supports revitalized waterfront communities.{" "}
+                <a
+                  href="/sources#kennebec-case-study"
+                  className="text-secondary underline hover:text-secondary/80"
+                  title="Kennebec River Restoration Information"
+                >
+                  Read more
+                </a>
               </p>
               <p className="text-sm text-primary font-semibold">
                 Timeline: Fish returned immediately; full recovery within 10 years
@@ -282,7 +296,14 @@ export default function VisionPage() {
               <h3 className="font-bold text-foreground mb-2">Ocklawaha Drawdowns, Florida (1990s)</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 During experimental drawdowns, native river vegetation and fish communities quickly re-established,
-                demonstrating the Ocklawaha's natural resilience.
+                demonstrating the Ocklawaha's natural resilience.{" "}
+                <a
+                  href="/sources#sjrwmd-drawdown"
+                  className="text-secondary underline hover:text-secondary/80"
+                  title="SJRWMD Drawdown Studies"
+                >
+                  View research
+                </a>
               </p>
               <p className="text-sm text-primary font-semibold">Timeline: Native species returned within months</p>
             </div>

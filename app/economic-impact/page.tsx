@@ -34,10 +34,17 @@ export default function EconomicImpactPage() {
           <div className="prose prose-lg max-w-none">
             <p className="text-muted-foreground leading-relaxed">
               The economic argument for Ocklawaha River restoration isn't just about environmental benefits—it's about
-              smart fiscal policy. Peer-reviewed research comparing recreation economics at free-flowing river sites vs.
-              reservoir sites shows that restoration can shift recreation patterns while generating economic
-              contributions. Meanwhile, maintaining Rodman Dam requires perpetual taxpayer spending with no return on
-              investment.
+              smart fiscal policy.{" "}
+              <a
+                href="/sources#borisova-2019"
+                className="text-secondary underline hover:text-secondary/80"
+                title="Borisova et al. (2019) - Economic Value Study"
+              >
+                Peer-reviewed research
+              </a>{" "}
+              comparing recreation economics at free-flowing river sites vs. reservoir sites shows that restoration can
+              shift recreation patterns while generating economic contributions. Meanwhile, maintaining Rodman Dam
+              requires perpetual taxpayer spending with no return on investment.
             </p>
           </div>
         </div>
@@ -122,7 +129,7 @@ export default function EconomicImpactPage() {
                   <strong>Full citation:</strong> Bi, X., Borisova, T., & Hodges, A. W. (2019). Economic value of
                   visitation to free-flowing and impounded portions of the Ocklawaha River in Florida: Implications for
                   management of river flow. <em>Review of Regional Studies</em>, 49(2), 244–268.{" "}
-                  <Link href="/sources" className="text-secondary underline hover:text-secondary/80">
+                  <Link href="/sources#borisova-2019" className="text-secondary underline hover:text-secondary/80">
                     View source
                   </Link>
                 </p>
@@ -134,9 +141,15 @@ export default function EconomicImpactPage() {
             <Card className="border border-border bg-card p-6 shadow-sm">
               <h4 className="font-semibold text-foreground mb-3">Peer-Reviewed Fishing Research</h4>
               <p className="text-sm text-muted-foreground mb-3">
-                Nagid et al. (2015) in the <em>North American Journal of Fisheries Management</em> shows drawdowns can
-                create strong largemouth bass year-classes—evidence that the "keep" side uses to support reservoir
-                management.
+                <a
+                  href="/sources#nagid-2015"
+                  className="text-secondary underline hover:text-secondary/80"
+                  title="Nagid et al. (2015) - Bass Fishery Research"
+                >
+                  Nagid et al. (2015)
+                </a>{" "}
+                in the <em>North American Journal of Fisheries Management</em> shows drawdowns can create strong
+                largemouth bass year-classes—evidence that the "keep" side uses to support reservoir management.
               </p>
               <p className="text-xs text-muted-foreground">
                 This is legitimate research showing the reservoir <em>can</em> produce quality fishing under active
@@ -148,9 +161,15 @@ export default function EconomicImpactPage() {
             <Card className="border border-border bg-card p-6 shadow-sm">
               <h4 className="font-semibold text-foreground mb-3">Policy Analysis vs. Academic Research</h4>
               <p className="text-sm text-muted-foreground mb-3">
-                Florida TaxWatch (2022) presents economic scenarios favoring retention. This is useful for understanding
-                policy arguments but is not peer-reviewed academic research—it's advocacy analysis with specific
-                assumptions.
+                <a
+                  href="/sources#florida-taxwatch-2022"
+                  className="text-secondary underline hover:text-secondary/80"
+                  title="Florida TaxWatch (2022) - Economic Analysis"
+                >
+                  Florida TaxWatch (2022)
+                </a>{" "}
+                presents economic scenarios favoring retention. This is useful for understanding policy arguments but is
+                not peer-reviewed academic research—it's advocacy analysis with specific assumptions.
               </p>
               <p className="text-xs text-muted-foreground">
                 When weighing economic evidence, peer-reviewed studies carry more weight than think-tank reports because

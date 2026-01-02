@@ -90,9 +90,16 @@ export default function EvidencePage() {
                 <h4 className="font-bold text-foreground">1. Documented Manatee Harm at Dam/Lock System</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Multiple verified and undetermined manatee mortalities documented at Buckman Lock/Rodman area, with
-                  carcass damage consistent with structural trauma. Marine Mammal Commission report explicitly states
-                  removal would eliminate the only known source of water-control-structure mortality in the St. Johns
-                  River system.
+                  carcass damage consistent with structural trauma.{" "}
+                  <a
+                    href="/sources#mmc-2006"
+                    className="text-secondary underline hover:text-secondary/80"
+                    title="Marine Mammal Commission (2006) - Taylor Report"
+                  >
+                    Marine Mammal Commission report
+                  </a>{" "}
+                  explicitly states removal would eliminate the only known source of water-control-structure mortality
+                  in the St. Johns River system.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: Marine Mammal Commission, UF-hosted technical reports
@@ -125,9 +132,16 @@ export default function EvidencePage() {
               <Card className="border-l-4 border-l-secondary bg-card p-6 shadow-md">
                 <h4 className="font-bold text-foreground">4. Water-Quality Tradeoffs Were Studied</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Florida Springs Institute documents that additional water-quality studies were required and completed
-                  during restoration planning, with findings that restoration benefits outweighed short-term
-                  water-quality impacts. This shows the concern was addressed, not ignored.
+                  <a
+                    href="/sources#florida-springs-institute"
+                    className="text-secondary underline hover:text-secondary/80"
+                    title="Florida Springs Institute - Ocklawaha Synoptic Study"
+                  >
+                    Florida Springs Institute
+                  </a>{" "}
+                  documents that additional water-quality studies were required and completed during restoration
+                  planning, with findings that restoration benefits outweighed short-term water-quality impacts. This
+                  shows the concern was addressed, not ignored.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: Florida Springs Institute synthesis of planning history
@@ -147,8 +161,22 @@ export default function EvidencePage() {
               <Card className="border-l-4 border-l-muted-foreground bg-card p-6 shadow-md">
                 <h4 className="font-bold text-foreground">1. Rodman Is a Major Fishery/Recreation Asset</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  FWC promotes Rodman as a significant reservoir fishing destination. Peer-reviewed research shows
-                  drawdowns can create strong largemouth bass recruitment under managed conditions.
+                  <a
+                    href="/sources#fwc-rodman"
+                    className="text-secondary underline hover:text-secondary/80"
+                    title="FWC - Rodman Reservoir Information"
+                  >
+                    FWC
+                  </a>{" "}
+                  promotes Rodman as a significant reservoir fishing destination.{" "}
+                  <a
+                    href="/sources#nagid-2015"
+                    className="text-secondary underline hover:text-secondary/80"
+                    title="Nagid et al. (2015) - Fishing Research"
+                  >
+                    Peer-reviewed research
+                  </a>{" "}
+                  shows drawdowns can create strong largemouth bass recruitment under managed conditions.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: FWC management pages, Nagid et al. 2015 (North American Journal of Fisheries Management)
@@ -158,9 +186,15 @@ export default function EvidencePage() {
               <Card className="border-l-4 border-l-muted-foreground bg-card p-6 shadow-md">
                 <h4 className="font-bold text-foreground">2. Rodman Can Retain Phosphorus</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  South Florida Water Management District contractor report calculated Rodman's phosphorus balance and
-                  shows net phosphorus retention across years (Table 9-5). This is real—reservoirs can trap some
-                  nutrients under certain conditions.
+                  <a
+                    href="/sources#sfwmd-phosphorus"
+                    className="text-secondary underline hover:text-secondary/80"
+                    title="SFWMD - Water Quality Impacts Report"
+                  >
+                    South Florida Water Management District contractor report
+                  </a>{" "}
+                  calculated Rodman's phosphorus balance and shows net phosphorus retention across years (Table 9-5).
+                  This is real—reservoirs can trap some nutrients under certain conditions.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: SFWMD "Water Quality Impacts of Reservoirs" report
