@@ -34,7 +34,7 @@ export default function ManateesPage() {
       {/* The Reality Section */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground">The Manatee Crisis</h2>
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
@@ -64,20 +64,23 @@ export default function ManateesPage() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <Card className="border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-6 shadow-md">
-                <h3 className="text-lg font-bold text-foreground">Why Springs Matter</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  On January 1, 2026, Blue Spring State Park counted <strong>697 manatees</strong> seeking warm-water
-                  refuge in a single spring. This demonstrates how critical accessible warm-water refuges are for
-                  manatee survival during winter months.
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Restoring the Ocklawaha's connection to Silver Springs and other warm-water refuges would expand this
-                  critical habitat network, giving manatees more options and reducing crowding at limited sites.
-                </p>
-              </Card>
             </div>
           </div>
+
+          <Card className="mt-12 border-l-4 border-l-secondary bg-gradient-to-br from-secondary/10 to-background p-8 shadow-md">
+            <h3 className="text-2xl font-bold text-foreground">Why Springs Matter</h3>
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              <p className="text-pretty leading-relaxed text-foreground">
+                On January 1, 2026, Blue Spring State Park counted <strong>697 manatees</strong> seeking warm-water
+                refuge in a single spring. This demonstrates how critical accessible warm-water refuges are for manatee
+                survival during winter months.
+              </p>
+              <p className="text-pretty leading-relaxed text-foreground">
+                Restoring the Ocklawaha's connection to Silver Springs and other warm-water refuges would expand this
+                critical habitat network, giving manatees more options and reducing crowding at limited sites.
+              </p>
+            </div>
+          </Card>
         </div>
       </section>
 
