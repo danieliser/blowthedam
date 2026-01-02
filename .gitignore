@@ -1,5 +1,10 @@
 node_modules
 
+# Next.js
+.next
+out
+*.tsbuildinfo
+
 # Supabase
 supabase/.temp
 .env.local
