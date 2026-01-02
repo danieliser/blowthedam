@@ -194,14 +194,14 @@ export default function VisionPage() {
       </section>
 
       {/* Detailed Comparisons */}
-      <section className="py-16">
+      <section className="bg-gradient-to-b from-background via-muted/20 to-background py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Detailed Comparison</h2>
 
           <div className="space-y-12">
             {comparisons.map((comparison, index) => (
-              <div key={index} className="border border-border rounded-lg overflow-hidden">
-                <div className="bg-muted/50 px-6 py-4 border-b border-border">
+              <div key={index} className="border border-border rounded-lg overflow-hidden shadow-md">
+                <div className="bg-gradient-to-r from-muted/50 to-muted/30 px-6 py-4 border-b border-border">
                   <h3 className="text-xl font-bold text-foreground">{comparison.category}</h3>
                 </div>
 
@@ -249,7 +249,7 @@ export default function VisionPage() {
       </section>
 
       {/* Success Examples */}
-      <section className="py-16 bg-muted/30">
+      <section className="border-t-4 border-secondary bg-gradient-to-b from-muted/50 to-background py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">This Vision Is Achievable</h2>
           <p className="text-center text-muted-foreground mb-12 text-pretty max-w-2xl mx-auto">
@@ -258,7 +258,7 @@ export default function VisionPage() {
           </p>
 
           <div className="space-y-6">
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-bold text-foreground mb-2">Elwha River, Washington (2014)</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 After removing two dams, salmon returned within months. Today the river supports thriving fisheries,
@@ -267,7 +267,7 @@ export default function VisionPage() {
               <p className="text-sm text-primary font-semibold">Timeline: Rapid ecosystem recovery within 2-5 years</p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-bold text-foreground mb-2">Kennebec River, Maine (1999)</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 Dam removal restored access for migratory fish. The river now generates millions in recreation revenue
@@ -278,7 +278,7 @@ export default function VisionPage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-bold text-foreground mb-2">Ocklawaha Drawdowns, Florida (1990s)</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 During experimental drawdowns, native river vegetation and fish communities quickly re-established,
@@ -291,7 +291,7 @@ export default function VisionPage() {
       </section>
 
       {/* The Path Forward */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">The Path Forward</h2>
 
@@ -352,7 +352,7 @@ export default function VisionPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-primary/5 border-t border-primary/20">
+      <section className="py-16 bg-primary/5 border-t-2 border-primary/20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Make This Vision a Reality</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">

@@ -45,7 +45,7 @@ export default function HomePage() {
       </section>
 
       {/* Key Issues Grid */}
-      <section className="py-16 sm:py-24">
+      <section className="bg-gradient-to-b from-background via-background to-muted/30 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Why Remove the Dam?</h2>
@@ -140,7 +140,7 @@ export default function HomePage() {
       </section>
 
       {/* Blow the Dam Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted py-16 sm:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-muted/30 via-background to-background py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="overflow-hidden rounded-2xl bg-card shadow-2xl">
             <div className="relative aspect-[16/9] sm:aspect-[21/9]">

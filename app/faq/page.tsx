@@ -19,11 +19,11 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Content */}
-      <section className="py-16 sm:py-20">
+      <section className="bg-gradient-to-b from-background to-muted/30 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {/* Recreation & Fishing */}
-            <AccordionItem value="recreation" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="recreation" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Won't restoration hurt recreation and fishing?
               </AccordionTrigger>
@@ -49,7 +49,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Jobs & Economy */}
-            <AccordionItem value="jobs" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="jobs" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 What about jobs and the local economy?
               </AccordionTrigger>
@@ -73,7 +73,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Manatees Usage */}
-            <AccordionItem value="manatees-history" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="manatees-history" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Didn't manatees never use the Ocklawaha before the dam?
               </AccordionTrigger>
@@ -103,7 +103,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Manatee Sanctuary */}
-            <AccordionItem value="manatees-sanctuary" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="manatees-sanctuary" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Isn't Rodman Reservoir an essential manatee sanctuary?
               </AccordionTrigger>
@@ -134,7 +134,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Water Quality */}
-            <AccordionItem value="water-quality" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="water-quality" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Won't removing the dam make water quality worse?
               </AccordionTrigger>
@@ -169,7 +169,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Springs */}
-            <AccordionItem value="springs" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="springs" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Will removing the dam actually help springs flow?
               </AccordionTrigger>
@@ -192,7 +192,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Aquifer Recharge */}
-            <AccordionItem value="recharge" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="recharge" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Doesn't the dam hold water to recharge the aquifer?
               </AccordionTrigger>
@@ -215,7 +215,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Ecosystem Destruction */}
-            <AccordionItem value="ecosystem" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="ecosystem" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Won't removing the dam destroy the established ecosystem?
               </AccordionTrigger>
@@ -245,7 +245,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Cost */}
-            <AccordionItem value="cost" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="cost" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 Isn't restoration too expensive?
               </AccordionTrigger>
@@ -271,7 +271,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* All Dams */}
-            <AccordionItem value="all-dams" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="all-dams" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 If we remove Rodman, do we have to remove all dams?
               </AccordionTrigger>
@@ -298,7 +298,7 @@ export default function FAQPage() {
             </AccordionItem>
 
             {/* Flood Control */}
-            <AccordionItem value="flooding" className="border rounded-lg px-6 bg-card">
+            <AccordionItem value="flooding" className="border rounded-lg px-6 bg-card shadow-sm">
               <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
                 What about flood control?
               </AccordionTrigger>
@@ -326,7 +326,7 @@ export default function FAQPage() {
           </Accordion>
 
           {/* Call to Action */}
-          <div className="mt-16 rounded-lg bg-primary/5 border border-primary/20 p-8 text-center">
+          <div className="mt-16 rounded-lg bg-primary/5 border-2 border-primary/20 p-8 text-center shadow-sm">
             <h3 className="text-2xl font-bold text-foreground mb-4">Still Have Questions?</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto text-pretty">
               We encourage critical thinking and evidence-based discussion. Check our Sources page for scientific

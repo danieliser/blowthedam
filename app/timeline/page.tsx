@@ -118,11 +118,14 @@ export default function TimelinePage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 sm:py-20">
+      <section className="bg-gradient-to-b from-background via-muted/20 to-background py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border" aria-hidden="true" />
+            <div
+              className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-border to-primary/50"
+              aria-hidden="true"
+            />
 
             {/* Timeline events */}
             <div className="space-y-12">
@@ -131,7 +134,7 @@ export default function TimelinePage() {
                   {/* Timeline dot */}
                   <div className="flex-shrink-0">
                     <div
-                      className={`w-16 h-16 rounded-full border-4 border-background flex items-center justify-center text-xs font-bold ${
+                      className={`w-16 h-16 rounded-full border-4 border-background flex items-center justify-center text-xs font-bold shadow-md ${
                         event.impact === "positive"
                           ? "bg-green-500/20 text-green-700 dark:text-green-400"
                           : event.impact === "negative"
@@ -145,7 +148,7 @@ export default function TimelinePage() {
 
                   {/* Event content */}
                   <div className="flex-1 pb-8">
-                    <div className="bg-card border border-border rounded-lg p-6 shadow-sm">
+                    <div className="bg-card border border-border rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
                       <div className="mb-2">
                         <span className="text-sm font-semibold text-primary">{event.year}</span>
                       </div>
@@ -161,11 +164,11 @@ export default function TimelinePage() {
       </section>
 
       {/* Key Takeaways */}
-      <section className="py-16 bg-muted/30">
+      <section className="border-t-4 border-secondary bg-gradient-to-b from-muted/50 to-background py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Key Takeaways</h2>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">The Dam Has No Purpose</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Built for a canal that was abandoned over 50 years ago, Rodman Dam serves no flood control, hydropower,
@@ -173,7 +176,7 @@ export default function TimelinePage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">Science Supports Restoration</h3>
               <p className="text-muted-foreground leading-relaxed">
                 The 1990s drawdown experiments demonstrated that the river ecosystem can recover rapidly. Native fish
@@ -181,7 +184,7 @@ export default function TimelinePage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">Costs Keep Rising</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Maintaining the artificial reservoir costs millions in herbicide treatments, mechanical vegetation
@@ -189,7 +192,7 @@ export default function TimelinePage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">The Crisis Is Getting Worse</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Springs are declining, manatees are dying, and toxic algae blooms are epidemic. Florida's water crisis
@@ -218,7 +221,7 @@ export default function TimelinePage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-primary/5 border-t border-primary/20">
+      <section className="py-16 bg-primary/5 border-t-2 border-primary/20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Don't Let This Continue Another 50 Years</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">

@@ -68,7 +68,7 @@ export default function ManateesPage() {
       </section>
 
       {/* Myth vs Fact Section */}
-      <section className="bg-muted py-16 sm:py-24">
+      <section className="border-t-4 border-secondary bg-gradient-to-b from-muted/50 to-background py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Myth vs. Fact</h2>
@@ -79,7 +79,7 @@ export default function ManateesPage() {
 
           <div className="mt-16 space-y-8">
             {/* Myth 1 */}
-            <Card className="overflow-hidden border-destructive/20 bg-card">
+            <Card className="overflow-hidden border-l-4 border-l-destructive border-destructive/20 bg-card shadow-md">
               <div className="flex flex-col gap-6 p-6 lg:flex-row lg:gap-8">
                 <div className="flex-shrink-0">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10">
@@ -108,7 +108,7 @@ export default function ManateesPage() {
             </Card>
 
             {/* Myth 2 */}
-            <Card className="overflow-hidden border-destructive/20 bg-card">
+            <Card className="overflow-hidden border-l-4 border-l-destructive border-destructive/20 bg-card shadow-md">
               <div className="flex flex-col gap-6 p-6 lg:flex-row lg:gap-8">
                 <div className="flex-shrink-0">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10">
@@ -137,7 +137,7 @@ export default function ManateesPage() {
             </Card>
 
             {/* Myth 3 */}
-            <Card className="overflow-hidden border-destructive/20 bg-card">
+            <Card className="overflow-hidden border-l-4 border-l-destructive border-destructive/20 bg-card shadow-md">
               <div className="flex flex-col gap-6 p-6 lg:flex-row lg:gap-8">
                 <div className="flex-shrink-0">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-destructive/10">

@@ -33,13 +33,13 @@ export default function EconomicImpactPage() {
       </section>
 
       {/* Cost Comparison */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">The Real Costs</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Maintaining Status Quo */}
-            <div className="bg-red-500/5 border-2 border-red-500/20 rounded-lg p-8">
+            <div className="bg-red-500/5 border-2 border-red-500/20 rounded-lg p-8 shadow-md">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
                   <DollarSign className="w-6 h-6 text-red-600 dark:text-red-400" />
@@ -75,7 +75,7 @@ export default function EconomicImpactPage() {
             </div>
 
             {/* Restoration Investment */}
-            <div className="bg-green-500/5 border-2 border-green-500/20 rounded-lg p-8">
+            <div className="bg-green-500/5 border-2 border-green-500/20 rounded-lg p-8 shadow-md">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-green-600 dark:text-green-400" />
@@ -113,12 +113,12 @@ export default function EconomicImpactPage() {
       </section>
 
       {/* Economic Benefits */}
-      <section className="py-16 bg-muted/30">
+      <section className="border-t-4 border-primary bg-gradient-to-b from-muted/50 to-background py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Economic Benefits of Restoration</h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-card border border-border rounded-lg p-6 text-center">
+            <div className="bg-card border border-border rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
               <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
                 <Briefcase className="w-8 h-8 text-primary" />
               </div>
@@ -129,7 +129,7 @@ export default function EconomicImpactPage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 text-center">
+            <div className="bg-card border border-border rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
               <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
                 <TrendingUp className="w-8 h-8 text-primary" />
               </div>
@@ -139,7 +139,7 @@ export default function EconomicImpactPage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 text-center">
+            <div className="bg-card border border-border rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
               <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
                 <Users className="w-8 h-8 text-primary" />
               </div>
@@ -149,7 +149,7 @@ export default function EconomicImpactPage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 text-center">
+            <div className="bg-card border border-border rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
               <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
                 <DollarSign className="w-8 h-8 text-primary" />
               </div>
@@ -163,12 +163,12 @@ export default function EconomicImpactPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Success Stories from Other States</h2>
 
           <div className="space-y-8">
-            <div className="bg-card border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8 shadow-md">
               <h3 className="text-xl font-bold text-foreground mb-3">Elwha River, Washington</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -189,7 +189,7 @@ export default function EconomicImpactPage() {
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-8">
+            <div className="bg-card border border-border rounded-lg p-8 shadow-md">
               <h3 className="text-xl font-bold text-foreground mb-3">Kennebec River, Maine</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -211,7 +211,7 @@ export default function EconomicImpactPage() {
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-8 bg-primary/5">
+            <div className="bg-card border-2 border-secondary rounded-lg p-8 bg-secondary/5 shadow-md">
               <h3 className="text-xl font-bold text-foreground mb-3">
                 Silver Springs, Florida (Our Own Success Story)
               </h3>
@@ -239,7 +239,7 @@ export default function EconomicImpactPage() {
       </section>
 
       {/* Ecosystem Services */}
-      <section className="py-16 bg-muted/30">
+      <section className="border-t-4 border-secondary bg-gradient-to-b from-muted/50 to-background py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Free Services from Natural Ecosystems</h2>
           <p className="text-center text-muted-foreground mb-12 text-pretty">
@@ -248,7 +248,7 @@ export default function EconomicImpactPage() {
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">Natural Water Filtration</h3>
               <p className="text-sm text-muted-foreground">
                 Wetlands and floodplains filter nutrients and pollutants naturally—replacing the need for expensive
@@ -256,7 +256,7 @@ export default function EconomicImpactPage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">Flood Mitigation</h3>
               <p className="text-sm text-muted-foreground">
                 Natural floodplains absorb and slowly release floodwaters, reducing downstream flood risk without costly
@@ -264,7 +264,7 @@ export default function EconomicImpactPage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">Habitat Support</h3>
               <p className="text-sm text-muted-foreground">
                 Healthy rivers support fisheries, wildlife, and manatee populations that drive tourism and recreation
@@ -272,7 +272,7 @@ export default function EconomicImpactPage() {
               </p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-semibold text-foreground mb-3">Climate Resilience</h3>
               <p className="text-sm text-muted-foreground">
                 Natural systems adapt to changing conditions better than static infrastructure, reducing long-term risk
@@ -284,7 +284,7 @@ export default function EconomicImpactPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 border-t border-border">
+      <section className="py-16 border-t-2 border-border">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Invest in Florida's Water Future</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
