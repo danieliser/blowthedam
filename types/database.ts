@@ -12,6 +12,31 @@ export type Database = {
   __InternalSupabase: {
     PostgrestVersion: "14.1"
   }
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          extensions?: Json
+          operationName?: string
+          query?: string
+          variables?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
   public: {
     Tables: {
       blog_categories: {
@@ -52,12 +77,12 @@ export type Database = {
           content: string
           created_at: string | null
           excerpt: string | null
+          featured_image: string | null
           featured_image_alt: string | null
-          featured_image_url: string | null
           id: string
           meta_description: string | null
           meta_title: string | null
-          og_image_url: string | null
+          og_image: string | null
           published_at: string | null
           slug: string
           status: Database["public"]["Enums"]["post_status"] | null
@@ -72,12 +97,12 @@ export type Database = {
           content: string
           created_at?: string | null
           excerpt?: string | null
+          featured_image?: string | null
           featured_image_alt?: string | null
-          featured_image_url?: string | null
           id?: string
           meta_description?: string | null
           meta_title?: string | null
-          og_image_url?: string | null
+          og_image?: string | null
           published_at?: string | null
           slug: string
           status?: Database["public"]["Enums"]["post_status"] | null
@@ -92,12 +117,12 @@ export type Database = {
           content?: string
           created_at?: string | null
           excerpt?: string | null
+          featured_image?: string | null
           featured_image_alt?: string | null
-          featured_image_url?: string | null
           id?: string
           meta_description?: string | null
           meta_title?: string | null
-          og_image_url?: string | null
+          og_image?: string | null
           published_at?: string | null
           slug?: string
           status?: Database["public"]["Enums"]["post_status"] | null
@@ -330,12 +355,12 @@ export type Database = {
           content: string | null
           created_at: string | null
           excerpt: string | null
+          featured_image: string | null
           featured_image_alt: string | null
-          featured_image_url: string | null
           id: string | null
           meta_description: string | null
           meta_title: string | null
-          og_image_url: string | null
+          og_image: string | null
           published_at: string | null
           slug: string | null
           status: Database["public"]["Enums"]["post_status"] | null
@@ -525,6 +550,9 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
+  graphql_public: {
+    Enums: {},
+  },
   public: {
     Enums: {
       post_status: ["draft", "published", "archived"],
