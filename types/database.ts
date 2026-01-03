@@ -69,6 +69,43 @@ export type Database = {
         }
         Relationships: []
       }
+      blog_post_tags: {
+        Row: {
+          post_id: string
+          tag_id: string
+        }
+        Insert: {
+          post_id: string
+          tag_id: string
+        }
+        Update: {
+          post_id?: string
+          tag_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_post_tags_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "blog_posts"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "blog_post_tags_post_id_fkey"
+            columns: ["post_id"]
+            isOneToOne: false
+            referencedRelation: "published_blog_posts"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "blog_post_tags_tag_id_fkey"
+            columns: ["tag_id"]
+            isOneToOne: false
+            referencedRelation: "tags"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       blog_posts: {
         Row: {
           author_name: string | null
@@ -87,7 +124,6 @@ export type Database = {
           published_at: string | null
           slug: string
           status: Database["public"]["Enums"]["post_status"] | null
-          tags: string[] | null
           title: string
           updated_at: string | null
         }
@@ -108,7 +144,6 @@ export type Database = {
           published_at?: string | null
           slug: string
           status?: Database["public"]["Enums"]["post_status"] | null
-          tags?: string[] | null
           title: string
           updated_at?: string | null
         }
@@ -129,7 +164,6 @@ export type Database = {
           published_at?: string | null
           slug?: string
           status?: Database["public"]["Enums"]["post_status"] | null
-          tags?: string[] | null
           title?: string
           updated_at?: string | null
         }
@@ -346,6 +380,30 @@ export type Database = {
           },
         ]
       }
+      tags: {
+        Row: {
+          created_at: string | null
+          id: string
+          name: string
+          slug: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          name: string
+          slug: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          name?: string
+          slug?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       published_blog_posts: {
@@ -360,6 +418,7 @@ export type Database = {
           excerpt: string | null
           featured_image: string | null
           featured_image_alt: string | null
+          focus_keyword: string | null
           id: string | null
           meta_description: string | null
           meta_title: string | null
@@ -367,7 +426,6 @@ export type Database = {
           published_at: string | null
           slug: string | null
           status: Database["public"]["Enums"]["post_status"] | null
-          tags: string[] | null
           title: string | null
           updated_at: string | null
         }
