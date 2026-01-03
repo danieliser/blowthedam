@@ -41,6 +41,21 @@ export type SourceType = Database['public']['Enums']['source_type'];
 export type PostStatus = Database['public']['Enums']['post_status'];
 
 // ============================================
+// SupaMode Image Type
+// ============================================
+
+/**
+ * SupaMode stores uploaded images as JSONB with this structure.
+ * Use getImageUrl() helper to extract the URL safely.
+ */
+export interface SupamodeImage {
+  url: string;
+  filename?: string;
+  size?: number;
+  contentType?: string;
+}
+
+// ============================================
 // Joined Types for Queries
 // ============================================
 
@@ -78,7 +93,7 @@ export interface CitationData {
   short_title: string | null;
   author: string | null;
   year: number | null;
-  source_type: SourceType;
+  source_type: SourceType | null;
   url: string | null;
   description: string | null;
 }

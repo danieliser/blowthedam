@@ -55,7 +55,7 @@ export function Citation({
   const [isOpen, setIsOpen] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [mounted, setMounted] = useState(false);
-  const hoverTimeoutRef = useRef<NodeJS.Timeout>();
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
   const triggerRef = useRef<HTMLAnchorElement>(null);
   const hasSetPosition = useRef(false);
 
@@ -193,10 +193,10 @@ export function Citation({
               {/* Source Type Badge */}
               <div className={cn(
                 "flex items-center gap-1.5 text-xs font-medium",
-                sourceTypeColors[citation.source_type]
+                sourceTypeColors[citation.source_type || 'other']
               )}>
-                {sourceTypeIcons[citation.source_type]}
-                <span>{sourceTypeLabels[citation.source_type]}</span>
+                {sourceTypeIcons[citation.source_type || 'other']}
+                <span>{sourceTypeLabels[citation.source_type || 'other']}</span>
               </div>
 
               {/* Title */}

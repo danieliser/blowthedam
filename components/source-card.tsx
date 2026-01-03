@@ -48,7 +48,7 @@ const sourceTypeBadges: Record<SourceType, { label: string; className: string; b
 };
 
 export function SourceCard({ source, showCategory }: SourceCardProps) {
-  const badge = sourceTypeBadges[source.source_type];
+  const badge = sourceTypeBadges[source.source_type || 'other'];
   const primaryUrl = source.url || source.pdf_url;
   const hasPdfSeparate = source.url && source.pdf_url;
 
