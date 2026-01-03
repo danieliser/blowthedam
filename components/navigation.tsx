@@ -32,6 +32,7 @@ export function Navigation() {
         { href: "/faq", label: "FAQ" },
       ],
     },
+    { href: "/blog", label: "Blog", type: "link" as const }, // Added Blog link to navigation
     { href: "/sources", label: "Sources", type: "link" as const },
     { href: "/take-action", label: "Take Action", type: "link" as const },
   ]

@@ -14,19 +14,19 @@ BlowTheDam.com - Environmental advocacy website for Rodman Dam removal.
 
 SupaMode stores uploaded images as **JSON strings in TEXT columns**, not plain URLs:
 
-```json
+\`\`\`json
 {"url":"https://xxx.supabase.co/storage/...","filename":"hero.jpg","size":245678,"type":"image/jpeg"}
-```
+\`\`\`
 
 **Always use the helper to extract URLs:**
 
-```tsx
+\`\`\`tsx
 import { getImageUrl } from '@/lib/utils'
 
 // In component
 const url = getImageUrl(post.featured_image)
 {url && <Image src={url} alt={post.title} fill />}
-```
+\`\`\`
 
 **Available helpers in `lib/utils.ts`:**
 
@@ -39,11 +39,11 @@ const url = getImageUrl(post.featured_image)
 
 Use Supabase CLI, not manual SQL:
 
-```bash
+\`\`\`bash
 supabase migration new <name>     # Create migration
 supabase db push                  # Push to remote
 supabase gen types typescript --linked > types/database.ts
-```
+\`\`\`
 
 GitHub Action auto-runs `supabase db push` on merge to main when migrations change.
 
@@ -55,7 +55,7 @@ GitHub Action auto-runs `supabase db push` on merge to main when migrations chan
 
 Server components fetch directly from Supabase:
 
-```tsx
+\`\`\`tsx
 // In app/page.tsx or similar
 import { createServerClient } from '@/lib/supabase'
 
@@ -64,25 +64,25 @@ export default async function Page() {
   const { data } = await supabase.from('sources').select('*')
   // ...
 }
-```
+\`\`\`
 
 ### Citation Popovers
 
 Use the `<Citation>` component for source references:
 
-```tsx
+\`\`\`tsx
 import { Citation } from '@/components/citation'
 
 <Citation sourceSlug="smith-1997">
   Manatees have been documented in the area
 </Citation>
-```
+\`\`\`
 
 ---
 
 ## File Structure
 
-```
+\`\`\`
 app/              # Next.js App Router pages
 components/       # React components
   ui/             # shadcn/ui primitives
@@ -90,7 +90,7 @@ lib/              # Utilities, Supabase client
 types/            # TypeScript types (database.ts is auto-generated)
 supabase/
   migrations/     # SQL migrations (use CLI to create)
-```
+\`\`\`
 
 ---
 
