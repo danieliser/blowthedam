@@ -79,6 +79,7 @@ export type Database = {
           excerpt: string | null
           featured_image: string | null
           featured_image_alt: string | null
+          focus_keyword: string | null
           id: string
           meta_description: string | null
           meta_title: string | null
@@ -99,6 +100,7 @@ export type Database = {
           excerpt?: string | null
           featured_image?: string | null
           featured_image_alt?: string | null
+          focus_keyword?: string | null
           id?: string
           meta_description?: string | null
           meta_title?: string | null
@@ -119,6 +121,7 @@ export type Database = {
           excerpt?: string | null
           featured_image?: string | null
           featured_image_alt?: string | null
+          focus_keyword?: string | null
           id?: string
           meta_description?: string | null
           meta_title?: string | null
