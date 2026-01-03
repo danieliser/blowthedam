@@ -83,12 +83,10 @@ export async function getPostBySlug(slug: string): Promise<BlogPostWithCategory 
 }
 
 export async function getPostsByCategory(categorySlug: string): Promise<BlogPostWithCategory[]> {
-  console.log("[v0] getPostsByCategory called with slug:", categorySlug)
   const supabase = createServerClient()
 
   const { data: category } = await supabase.from("blog_categories").select("id").eq("slug", categorySlug).single()
 
-  console.log("[v0] Category lookup result:", category)
   if (!category) return []
 
   const { data, error } = await supabase
@@ -102,8 +100,6 @@ export async function getPostsByCategory(categorySlug: string): Promise<BlogPost
     .eq("status", "published")
     .lte("published_at", new Date().toISOString())
     .order("published_at", { ascending: false, nullsFirst: false })
-
-  console.log("[v0] Posts query result:", { data, error, categoryId: category.id })
 
   if (error) {
     console.error(`Error fetching posts for category ${categorySlug}:`, error)

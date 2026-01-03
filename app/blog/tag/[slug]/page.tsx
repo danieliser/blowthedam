@@ -1,10 +1,9 @@
-import { Suspense } from "react"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { BlogFooter } from "@/components/blog-footer"
-import { getPostsByTag, getTagBySlug, getSupabaseImageUrl } from "@/lib/blog"
+import { getPostsByTag, getTagBySlug, getAllTags, getSupabaseImageUrl } from "@/lib/blog"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -12,16 +11,16 @@ import { Calendar, ArrowLeft, Tag } from "lucide-react"
 import { format } from "date-fns"
 
 interface TagPageProps {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }
 
 export async function generateStaticParams() {
-  const tags = await getTagBySlug()
+  const tags = await getAllTags()
   return tags.map((tag) => ({ slug: tag.slug }))
 }
 
 export async function generateMetadata({ params }: TagPageProps) {
-  const { slug } = await params
+  const { slug } = params
   const tag = await getTagBySlug(slug)
 
   if (!tag) {
@@ -39,7 +38,8 @@ export async function generateMetadata({ params }: TagPageProps) {
   }
 }
 
-async function TagContent({ slug }: { slug: string }) {
+export default async function TagPage({ params }: TagPageProps) {
+  const { slug } = params
   const [posts, tag] = await Promise.all([getPostsByTag(slug), getTagBySlug(slug)])
 
   if (!tag) {
@@ -48,6 +48,8 @@ async function TagContent({ slug }: { slug: string }) {
 
   return (
     <>
+      <Navigation />
+
       <div className="bg-gradient-to-b from-background to-muted/50 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link href="/blog">
@@ -120,19 +122,7 @@ async function TagContent({ slug }: { slug: string }) {
           </div>
         )}
       </div>
-    </>
-  )
-}
 
-export default async function TagPage({ params }: TagPageProps) {
-  const { slug } = await params
-
-  return (
-    <>
-      <Navigation />
-      <Suspense fallback={<div className="min-h-screen">Loading...</div>}>
-        <TagContent slug={slug} />
-      </Suspense>
       <BlogFooter />
     </>
   )

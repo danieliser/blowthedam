@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
@@ -20,11 +19,13 @@ export const metadata = {
   },
 }
 
-async function BlogContent() {
+export default async function BlogPage() {
   const [posts, categories] = await Promise.all([getPublishedPosts(), getBlogCategories()])
 
   return (
     <>
+      <Navigation />
+
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-background to-muted/50 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -117,17 +118,7 @@ async function BlogContent() {
           </div>
         )}
       </div>
-    </>
-  )
-}
 
-export default function BlogPage() {
-  return (
-    <>
-      <Navigation />
-      <Suspense fallback={<div className="min-h-screen">Loading...</div>}>
-        <BlogContent />
-      </Suspense>
       <BlogFooter />
     </>
   )

@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
@@ -12,7 +11,7 @@ import { Calendar, ArrowLeft, ArrowRight } from "lucide-react"
 import { format } from "date-fns"
 
 interface BlogPostPageProps {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }
 
 export async function generateStaticParams() {
@@ -21,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const { slug } = await params
+  const { slug } = params
   const post = await getPostBySlug(slug)
 
   if (!post) {
@@ -56,7 +55,8 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 }
 
-async function BlogPostContent({ slug }: { slug: string }) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = params
   const [post, { previous, next }] = await Promise.all([getPostBySlug(slug), getAdjacentPosts(slug)])
 
   if (!post) {
@@ -65,6 +65,8 @@ async function BlogPostContent({ slug }: { slug: string }) {
 
   return (
     <>
+      <Navigation />
+
       {/* Hero Section with Featured Image */}
       <div className="relative">
         {post.featured_image && (
@@ -168,19 +170,7 @@ async function BlogPostContent({ slug }: { slug: string }) {
           )}
         </div>
       </div>
-    </>
-  )
-}
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params
-
-  return (
-    <>
-      <Navigation />
-      <Suspense fallback={<div className="min-h-screen">Loading...</div>}>
-        <BlogPostContent slug={slug} />
-      </Suspense>
       <BlogFooter />
     </>
   )

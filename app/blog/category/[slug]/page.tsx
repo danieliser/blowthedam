@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
@@ -12,7 +11,7 @@ import { Calendar, ArrowLeft } from "lucide-react"
 import { format } from "date-fns"
 
 interface CategoryPageProps {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }
 
 export async function generateStaticParams() {
@@ -21,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps) {
-  const { slug } = await params
+  const { slug } = params
   const category = await getCategoryBySlug(slug)
 
   if (!category) {
@@ -39,11 +38,9 @@ export async function generateMetadata({ params }: CategoryPageProps) {
   }
 }
 
-async function CategoryContent({ slug }: { slug: string }) {
-  console.log("[v0] CategoryContent rendering for slug:", slug)
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { slug } = params
   const [posts, category] = await Promise.all([getPostsByCategory(slug), getCategoryBySlug(slug)])
-
-  console.log("[v0] Category page data:", { category, postsCount: posts.length })
 
   if (!category) {
     notFound()
@@ -51,6 +48,8 @@ async function CategoryContent({ slug }: { slug: string }) {
 
   return (
     <>
+      <Navigation />
+
       <div className="bg-gradient-to-b from-background to-muted/50 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link href="/blog">
@@ -122,19 +121,7 @@ async function CategoryContent({ slug }: { slug: string }) {
           </div>
         )}
       </div>
-    </>
-  )
-}
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { slug } = await params
-
-  return (
-    <>
-      <Navigation />
-      <Suspense fallback={<div className="min-h-screen">Loading...</div>}>
-        <CategoryContent slug={slug} />
-      </Suspense>
       <BlogFooter />
     </>
   )
