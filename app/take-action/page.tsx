@@ -32,8 +32,8 @@ export default function TakeActionPage() {
       <section className="relative overflow-hidden bg-secondary py-24 text-secondary-foreground sm:py-32">
         <div className="absolute inset-0 z-0">
           <img
-            src="/rodman-dam-explosion.jpg"
-            alt="Rodman Dam removal visualization"
+            src="/rivers-reconnected-hero.jpg"
+            alt="Rivers Reconnected - Vision of restored Ocklawaha River"
             className="h-full w-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-secondary" />

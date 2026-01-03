@@ -5,7 +5,7 @@ export function BlogFooter() {
     <footer className="border-t border-border bg-muted py-12 mt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center text-sm text-muted-foreground">
-          <p className="font-medium text-foreground">Blow The Dam</p>
+          <p className="font-medium text-foreground">Rivers Reconnected</p>
           <p className="mt-2">Advocating for the removal of Rodman Dam and restoration of Florida's Ocklawaha River</p>
           <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href="/manatees" className="hover:text-foreground transition-colors">

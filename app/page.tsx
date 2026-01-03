@@ -150,17 +150,14 @@ export default function HomePage() {
           <div className="overflow-hidden rounded-2xl bg-card shadow-2xl">
             <div className="relative aspect-[16/9] sm:aspect-[21/9]">
               <img
-                src="/rodman-dam-explosion.jpg"
-                alt="Rodman Dam Explosion - Opening the gateways to Silver Springs & the St. Johns"
+                src="/rivers-reconnected-hero.jpg"
+                alt="Rivers Reconnected - Restored Ocklawaha River ecosystem"
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-12">
+              <div className="absolute inset-0 flex items-end justify-center p-6 pb-12 sm:p-12">
                 <div className="text-center">
-                  <h2 className="text-balance text-3xl font-bold text-white drop-shadow-lg sm:text-4xl lg:text-5xl">
-                    It's Time to Blow the Dam
-                  </h2>
-                  <p className="mt-4 text-pretty text-lg text-white/95 drop-shadow-md sm:text-xl lg:text-2xl">
+                  <p className="text-pretty text-2xl font-semibold text-white drop-shadow-lg sm:text-3xl lg:text-4xl">
                     Opening the gateways to Silver Springs & the St. Johns River
                   </p>
                   <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -220,7 +217,7 @@ export default function HomePage() {
       <footer className="border-t border-border bg-muted py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center text-sm text-muted-foreground">
-            <p className="font-medium text-foreground">Restore the Ocklawaha</p>
+            <p className="font-medium text-foreground">Rivers Reconnected</p>
             <p className="mt-2">
               Advocating for the removal of Rodman Dam and restoration of Florida's Ocklawaha River
             </p>
