@@ -19,6 +19,8 @@ export async function generateStaticParams() {
   return tags.map((tag) => ({ slug: tag.slug }))
 }
 
+export const dynamicParams = true
+
 export async function generateMetadata({ params }: TagPageProps) {
   const { slug } = await params
   const tag = await getTagBySlug(slug)

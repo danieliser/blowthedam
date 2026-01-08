@@ -19,6 +19,8 @@ export async function generateStaticParams() {
   return categories.map((category) => ({ slug: category.slug }))
 }
 
+export const dynamicParams = true
+
 export async function generateMetadata({ params }: CategoryPageProps) {
   const { slug } = await params
   const category = await getCategoryBySlug(slug)
