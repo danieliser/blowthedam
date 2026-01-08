@@ -11,7 +11,7 @@ import { Calendar, ArrowLeft } from "lucide-react"
 import { format } from "date-fns"
 
 interface CategoryPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps) {
-  const { slug } = params
+  const { slug } = await params
   const category = await getCategoryBySlug(slug)
 
   if (!category) {
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
   }
 
   return {
-    title: `${category.name} | Blog | Blow The Dam`,
+    title: `${category.name} | Blog | Rivers Reconnected`,
     description: category.description || `Posts in ${category.name}`,
     openGraph: {
       title: `${category.name} | Blog`,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { slug } = params
+  const { slug } = await params
   const [posts, category] = await Promise.all([getPostsByCategory(slug), getCategoryBySlug(slug)])
 
   if (!category) {

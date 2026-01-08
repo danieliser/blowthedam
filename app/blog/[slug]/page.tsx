@@ -11,7 +11,7 @@ import { Calendar, ArrowLeft, ArrowRight } from "lucide-react"
 import { format } from "date-fns"
 
 interface BlogPostPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const { slug } = params
+  const { slug } = await params
   const post = await getPostBySlug(slug)
 
   if (!post) {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     }
   }
 
-  const title = post.meta_title || `${post.title} | Blow The Dam`
+  const title = post.meta_title || `${post.title} | Rivers Reconnected`
   const description = post.meta_description || post.excerpt || post.title
   const ogImage = getSupabaseImageUrl(post.og_image) || getSupabaseImageUrl(post.featured_image) || undefined
   const canonical = post.canonical_url || undefined
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = params
+  const { slug } = await params
   const [post, { previous, next }] = await Promise.all([getPostBySlug(slug), getAdjacentPosts(slug)])
 
   if (!post) {

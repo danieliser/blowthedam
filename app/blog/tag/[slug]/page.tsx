@@ -11,7 +11,7 @@ import { Calendar, ArrowLeft, Tag } from "lucide-react"
 import { format } from "date-fns"
 
 interface TagPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: TagPageProps) {
-  const { slug } = params
+  const { slug } = await params
   const tag = await getTagBySlug(slug)
 
   if (!tag) {
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: TagPageProps) {
   }
 
   return {
-    title: `${tag.name} | Blog | Blow The Dam`,
+    title: `${tag.name} | Blog | Rivers Reconnected`,
     description: `Posts tagged with ${tag.name}`,
     openGraph: {
       title: `${tag.name} | Blog`,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: TagPageProps) {
 }
 
 export default async function TagPage({ params }: TagPageProps) {
-  const { slug } = params
+  const { slug } = await params
   const [posts, tag] = await Promise.all([getPostsByTag(slug), getTagBySlug(slug)])
 
   if (!tag) {
