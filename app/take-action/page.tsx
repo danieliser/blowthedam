@@ -71,8 +71,14 @@ export default function TakeActionPage() {
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                 Add your name to the growing list of Floridians supporting dam removal and river restoration.
               </p>
-              <Button className="mt-6 w-full bg-transparent" variant="outline">
-                Sign Now
+              <Button asChild className="mt-6 w-full bg-transparent" variant="outline">
+                <a
+                  href="https://reunitetherivers.com/ocklawaha-restoration-pledge/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sign Now
+                </a>
               </Button>
             </Card>
 
@@ -85,8 +91,14 @@ export default function TakeActionPage() {
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                 Let your elected representatives know you support Ocklawaha River restoration.
               </p>
-              <Button className="mt-6 w-full bg-transparent" variant="outline">
-                Find Your Reps
+              <Button asChild className="mt-6 w-full bg-transparent" variant="outline">
+                <a
+                  href="https://dos.fl.gov/elections/contacts/elected-officials/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Find Your Reps
+                </a>
               </Button>
             </Card>
 
@@ -99,8 +111,14 @@ export default function TakeActionPage() {
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                 Share this site and information about river restoration with friends and family.
               </p>
-              <Button className="mt-6 w-full bg-transparent" variant="outline">
-                Share This Site
+              <Button asChild className="mt-6 w-full bg-transparent" variant="outline">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61585986120312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Share This Site
+                </a>
               </Button>
             </Card>
 
@@ -113,8 +131,10 @@ export default function TakeActionPage() {
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                 Connect with environmental groups actively working on Ocklawaha restoration.
               </p>
-              <Button className="mt-6 w-full bg-transparent" variant="outline">
-                Learn More
+              <Button asChild className="mt-6 w-full bg-transparent" variant="outline">
+                <a href="https://stjohnsriverkeeper.org/join-give/" target="_blank" rel="noopener noreferrer">
+                  Learn More
+                </a>
               </Button>
             </Card>
 
@@ -127,8 +147,10 @@ export default function TakeActionPage() {
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                 Participate in public meetings and hearings about water management decisions.
               </p>
-              <Button className="mt-6 w-full bg-transparent" variant="outline">
-                Find Events
+              <Button asChild className="mt-6 w-full bg-transparent" variant="outline">
+                <a href="https://floridadep.gov/events" target="_blank" rel="noopener noreferrer">
+                  Find Events
+                </a>
               </Button>
             </Card>
 
@@ -141,7 +163,11 @@ export default function TakeActionPage() {
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
                 Financial support helps fund research, advocacy, and legal efforts for restoration.
               </p>
-              <Button className="mt-6 w-full bg-secondary hover:bg-secondary/90">Donate</Button>
+              <Button asChild className="mt-6 w-full bg-secondary hover:bg-secondary/90">
+                <a href="https://www.floridaspringscouncil.org/makeadonation" target="_blank" rel="noopener noreferrer">
+                  Donate
+                </a>
+              </Button>
             </Card>
           </div>
         </div>
@@ -249,11 +275,17 @@ export default function TakeActionPage() {
                   The Governor appoints members to the St. Johns River Water Management District Governing Board
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <Button size="sm" variant="outline">
-                    Email Governor
+                  <Button asChild size="sm" variant="outline">
+                    <a
+                      href="https://www.flgov.com/eog/leadership/people/ron-desantis/contact"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Email Governor
+                    </a>
                   </Button>
-                  <Button size="sm" variant="outline">
-                    Call Office
+                  <Button asChild size="sm" variant="outline">
+                    <a href="tel:+18507179282">Call Office</a>
                   </Button>
                 </div>
               </Card>
@@ -264,11 +296,15 @@ export default function TakeActionPage() {
                   SJRWMD manages water resources in the region and has authority over Rodman Dam decisions
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <Button size="sm" variant="outline">
-                    Contact SJRWMD
+                  <Button asChild size="sm" variant="outline">
+                    <a href="https://www.sjrwmd.com/contact" target="_blank" rel="noopener noreferrer">
+                      Contact SJRWMD
+                    </a>
                   </Button>
-                  <Button size="sm" variant="outline">
-                    Attend Meeting
+                  <Button asChild size="sm" variant="outline">
+                    <a href="https://floridadep.gov/events" target="_blank" rel="noopener noreferrer">
+                      Attend Meeting
+                    </a>
                   </Button>
                 </div>
               </Card>
@@ -279,11 +315,15 @@ export default function TakeActionPage() {
                   DEP oversees environmental regulations and restoration projects statewide
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <Button size="sm" variant="outline">
-                    Contact DEP
+                  <Button asChild size="sm" variant="outline">
+                    <a href="https://www.floridadep.gov/contact" target="_blank" rel="noopener noreferrer">
+                      Contact DEP
+                    </a>
                   </Button>
-                  <Button size="sm" variant="outline">
-                    View Projects
+                  <Button asChild size="sm" variant="outline">
+                    <a href="https://www.floridadep.gov/projects" target="_blank" rel="noopener noreferrer">
+                      View Projects
+                    </a>
                   </Button>
                 </div>
               </Card>
@@ -294,11 +334,23 @@ export default function TakeActionPage() {
                   Local legislators can advocate for restoration funding and environmental policy changes
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <Button size="sm" variant="outline">
-                    Find Your Senator
+                  <Button asChild size="sm" variant="outline">
+                    <a
+                      href="https://dos.fl.gov/elections/contacts/elected-officials/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Find Your Senator
+                    </a>
                   </Button>
-                  <Button size="sm" variant="outline">
-                    Find Your Representative
+                  <Button asChild size="sm" variant="outline">
+                    <a
+                      href="https://dos.fl.gov/elections/contacts/elected-officials/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Find Your Representative
+                    </a>
                   </Button>
                 </div>
               </Card>

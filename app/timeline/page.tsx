@@ -45,11 +45,7 @@ export default function TimelinePage() {
       description:
         "FDEP report by Kent Smith documents manatee mortality at the Buckman Lock/Rodman Dam system, with carcass damage consistent with trauma from water-control structures. This becomes key evidence for restoration advocacy.",
       impact: "negative",
-      source: (
-        <Citation slug="smith-1997">
-          View source
-        </Citation>
-      ),
+      source: <Citation slug="smith-1997">View source</Citation>,
     },
     {
       year: "1998",
@@ -254,7 +250,9 @@ export default function TimelinePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/take-action"
+              href="https://reunitetherivers.com/ocklawaha-restoration-pledge/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Take Action Now

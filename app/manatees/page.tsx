@@ -41,11 +41,9 @@ export default function ManateesPage() {
               <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
                 <p>
                   Florida's manatees are facing unprecedented challenges.{" "}
-                  <Citation sourceSlug="usfws-recovery">
-                    Over 1,000 manatees died in 2021 alone
-                  </Citation>
-                  , with hundreds more in subsequent years. The primary cause: loss of seagrass beds and warm-water
-                  refuges that manatees depend on for survival.
+                  <Citation sourceSlug="usfws-recovery">Over 1,000 manatees died in 2021 alone</Citation>, with hundreds
+                  more in subsequent years. The primary cause: loss of seagrass beds and warm-water refuges that
+                  manatees depend on for survival.
                 </p>
                 <p>
                   Manatees need two critical elements to thrive:{" "}
@@ -269,18 +267,14 @@ export default function ManateesPage() {
             <div className="mt-8 space-y-6 text-pretty leading-relaxed text-foreground">
               <p>
                 The key to manatee recovery isn't managing an artificial reservoir—it's{" "}
-                <Citation sourceSlug="marine-mammal">
-                  restoring natural connectivity
-                </Citation>
-                . The Ocklawaha River historically linked the St. Johns River to the Silver River and Silver Springs
-                complex, creating a resilient network of warm-water refuges and feeding grounds.
+                <Citation sourceSlug="marine-mammal">restoring natural connectivity</Citation>. The Ocklawaha River
+                historically linked the St. Johns River to the Silver River and Silver Springs complex, creating a
+                resilient network of warm-water refuges and feeding grounds.
               </p>
               <p>
-                <Citation sourceSlug="save-the-manatee">
-                  Removing Rodman Dam would restore this connection
-                </Citation>
-                , allowing manatees to move naturally between habitats based on water temperature, food availability,
-                and seasonal needs. This is how healthy manatee populations survive—not by depending on a single managed
+                <Citation sourceSlug="save-the-manatee">Removing Rodman Dam would restore this connection</Citation>,
+                allowing manatees to move naturally between habitats based on water temperature, food availability, and
+                seasonal needs. This is how healthy manatee populations survive—not by depending on a single managed
                 impoundment.
               </p>
             </div>
@@ -313,10 +307,14 @@ export default function ManateesPage() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/take-action">
+                <a
+                  href="https://reunitetherivers.com/ocklawaha-restoration-pledge/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Take Action
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </a>
               </Button>
               <Button
                 size="lg"

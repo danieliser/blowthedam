@@ -198,7 +198,13 @@ export default function HomePage() {
                 className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary bg-transparent"
                 asChild
               >
-                <Link href="/take-action">Sign the Petition</Link>
+                <a
+                  href="https://reunitetherivers.com/ocklawaha-restoration-pledge/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sign the Petition
+                </a>
               </Button>
               <Button
                 size="lg"

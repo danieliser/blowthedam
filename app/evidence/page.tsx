@@ -92,11 +92,9 @@ export default function EvidencePage() {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Multiple verified and undetermined manatee mortalities documented at Buckman Lock/Rodman area, with
                   carcass damage consistent with structural trauma.{" "}
-                  <Citation slug="marine-mammal">
-                    Marine Mammal Commission report
-                  </Citation>{" "}
-                  explicitly states removal would eliminate the only known source of water-control-structure mortality
-                  in the St. Johns River system.
+                  <Citation slug="marine-mammal">Marine Mammal Commission report</Citation> explicitly states removal
+                  would eliminate the only known source of water-control-structure mortality in the St. Johns River
+                  system.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: Marine Mammal Commission, UF-hosted technical reports
@@ -129,12 +127,10 @@ export default function EvidencePage() {
               <Card className="border-l-4 border-l-secondary bg-card p-6 shadow-md">
                 <h4 className="font-bold text-foreground">4. Water-Quality Tradeoffs Were Studied</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  <Citation slug="fl-springs-institute">
-                    Florida Springs Institute
-                  </Citation>{" "}
-                  documents that additional water-quality studies were required and completed during restoration
-                  planning, with findings that restoration benefits outweighed short-term water-quality impacts. This
-                  shows the concern was addressed, not ignored.
+                  <Citation slug="fl-springs-institute">Florida Springs Institute</Citation> documents that additional
+                  water-quality studies were required and completed during restoration planning, with findings that
+                  restoration benefits outweighed short-term water-quality impacts. This shows the concern was
+                  addressed, not ignored.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: Florida Springs Institute synthesis of planning history
@@ -154,10 +150,9 @@ export default function EvidencePage() {
               <Card className="border-l-4 border-l-muted-foreground bg-card p-6 shadow-md">
                 <h4 className="font-bold text-foreground">1. Rodman Is a Major Fishery/Recreation Asset</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  <Citation slug="fwc-rodman">
-                    FWC
-                  </Citation>{" "}
-                  promotes Rodman as a significant reservoir fishing destination. Peer-reviewed research shows drawdowns can create strong largemouth bass recruitment under managed conditions.
+                  <Citation slug="fwc-rodman">FWC</Citation> promotes Rodman as a significant reservoir fishing
+                  destination. Peer-reviewed research shows drawdowns can create strong largemouth bass recruitment
+                  under managed conditions.
                 </p>
                 <p className="mt-2 text-xs italic text-muted-foreground">
                   Source: FWC management pages, Nagid et al. 2015 (North American Journal of Fisheries Management)
@@ -267,10 +262,14 @@ export default function EvidencePage() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/take-action">
+                <a
+                  href="https://reunitetherivers.com/ocklawaha-restoration-pledge/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Take Action
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </a>
               </Button>
               <Button
                 size="lg"
